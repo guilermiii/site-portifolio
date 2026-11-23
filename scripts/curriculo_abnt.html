@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo - Guilherme de Souza Mizael de Morais</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 1.8cm 2.0cm 1.8cm 2.0cm;
+    }
+    body {
+      font-family: "Liberation Sans", "DejaVu Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.35;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .name {
+      font-size: 17pt;
+      font-weight: bold;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    .contact-info {
+      font-size: 9.5pt;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .contact-info a {
+      color: #0369a1;
+      text-decoration: none;
+    }
+    .section-title {
+      font-size: 11pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-top: 13px;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+    .objective {
+      font-size: 10pt;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+    .summary-text {
+      text-align: justify;
+      font-size: 10pt;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .experience-item {
+      margin-bottom: 11px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .company-name {
+      font-weight: bold;
+      font-size: 10.5pt;
+      color: #0f172a;
+    }
+    .job-period {
+      font-size: 9pt;
+      color: #475569;
+      font-weight: 600;
+    }
+    .job-role {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #0284c7;
+      margin-bottom: 4px;
+    }
+    ul {
+      margin: 3px 0 6px 0;
+      padding-left: 18px;
+    }
+    li {
+      margin-bottom: 3px;
+      text-align: justify;
+      font-size: 9.5pt;
+      color: #334155;
+    }
+    .skills-grid {
+      display: table;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .skill-row {
+      display: table-row;
+    }
+    .skill-cat {
+      display: table-cell;
+      font-weight: bold;
+      font-size: 9.5pt;
+      color: #0f172a;
+      width: 28%;
+      padding-bottom: 3px;
+    }
+    .skill-val {
+      display: table-cell;
+      font-size: 9.5pt;
+      color: #334155;
+      padding-bottom: 3px;
+    }
+    .cert-item {
+      font-size: 9.5pt;
+      margin-bottom: 3px;
+      color: #334155;
+    }
+    .cert-issuer {
+      font-weight: bold;
+      color: #0f172a;
+    }
+    .education-item {
+      margin-bottom: 5px;
+    }
+    .edu-degree {
+      font-weight: bold;
+      font-size: 10pt;
+      color: #0f172a;
+    }
+    .edu-inst {
+      font-size: 9.5pt;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <div class="header">
+    <div class="name">Guilherme de Souza Mizael de Morais</div>
+    <div class="contact-info">
+      Brasileiro, 23 anos • Campo Belo – Minas Gerais (Disponibilidade para Mudança e Atuação Remota)<br>
+      E-mail: <a href="mailto:guisouzaskill@gmail.com">guisouzaskill@gmail.com</a> • LinkedIn: <a href="https://www.linkedin.com/in/guilherme--desouza/">linkedin.com/in/guilherme--desouza</a><br>
+      GitHub: <a href="https://github.com/guilermiii">github.com/guilermiii</a> • Portfólio Credly: <a href="https://www.credly.com/users/guilherme-souza.97d0f101">credly.com/users/guilherme-souza.97d0f101</a>
+    </div>
+  </div>
+
+  <!-- OBJETIVO -->
+  <div class="section-title">Objetivo Profissional</div>
+  <div class="objective">
+    Engenheiro de DevOps | SRE | Analista de Infraestrutura Crítica On-Premise & Cloud
+  </div>
+
+  <!-- RESUMO PROFISSIONAL -->
+  <div class="section-title">Resumo das Qualificações</div>
+  <div class="summary-text">
+    Profissional de Tecnologia com sólida atuação em ambientes de missão crítica de alta complexidade (24/7), especializado na gestão, segurança e modernização de infraestrutura on-premises e em nuvem. Experiência comprovada na redução expressiva de RPO (de 24h para 10 min), implementação de políticas de backup e disaster recovery corporativo com Veeam, virtualização bare-metal (Proxmox VE, VMware e Hyper-V), redes gerenciadas multi-vendor (MikroTik, UniFi, switches L2/L3) e governança operacional estruturada com framework ITIL e plataforma GLPI. Atuação contínua em automação declarativa com Terraform, conteinerização Docker/Kubernetes e orquestração de nuvem híbrida (Oracle Cloud OCI e AWS).
+  </div>
+
+  <!-- COMPETÊNCIAS TÉCNICAS -->
+  <div class="section-title">Competências Técnicas</div>
+  <div class="skills-grid">
+    <div class="skill-row">
+      <div class="skill-cat">Virtualização & Bare-Metal:</div>
+      <div class="skill-val">Proxmox VE, VMware ESXi / vSphere, Microsoft Hyper-V, KVM.</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-cat">Sistemas Operacionais:</div>
+      <div class="skill-val">Linux (Debian, Ubuntu Server, Alpine, RHEL), Windows Server (Active Directory, DNS, GPO).</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-cat">Backup & Continuidade:</div>
+      <div class="skill-val">Veeam Backup & Replication, rotinas 3-2-1, testes de restore, runbooks de DR.</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-cat">Redes & Segurança:</div>
+      <div class="skill-val">MikroTik RouterOS, UniFi Enterprise, VPN IPsec Site-to-Site/Client-to-Site, VLANs, Proxy Reverso Nginx, EDR/XDR, LGPD.</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-cat">Cloud & DevOps / IaC:</div>
+      <div class="skill-val">Oracle Cloud (OCI), AWS, Terraform, Docker, Kubernetes, CI/CD (GitHub Actions), Python, Bash Scripting.</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-cat">Governança & Suporte:</div>
+      <div class="skill-val">Framework ITIL, Gestão de Incidentes e Chamados GLPI, Microsoft 365, Procedimentos Operacionais Padrão (POPs).</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICAÇÕES OFICIAIS -->
+  <div class="section-title">Certificações Oficiais</div>
+  <div class="cert-item">• <span class="cert-issuer">LFCA</span> – Linux Foundation Certified IT Associate (The Linux Foundation)</div>
+  <div class="cert-item">• <span class="cert-issuer">OCI Foundations</span> – Oracle Cloud Infrastructure Certified Foundations Associate (Oracle)</div>
+  <div class="cert-item">• <span class="cert-issuer">OCI AI Foundations</span> – Oracle Cloud Infrastructure Certified AI Foundations Associate (Oracle)</div>
+  <div class="cert-item">• <span class="cert-issuer">Oracle Agentic AI</span> – Oracle Agentic AI Foundations Associate (Oracle)</div>
+
+  <!-- EXPERIÊNCIA PROFISSIONAL -->
+  <div class="section-title">Experiência Profissional</div>
+
+  <div class="experience-item">
+    <div class="job-header">
+      <span class="company-name">Unimed Cooperativa de Trabalho Médico – Campo Belo/MG</span>
+      <span class="job-period">02/2025 – 06/2026</span>
+    </div>
+    <div class="job-role">Auxiliar de TI → Analista de Infraestrutura de Redes → Analista de TI</div>
+    <ul>
+      <li><strong>Redução de RPO:</strong> Otimização do Recovery Point Objective de 24 horas para apenas 10 minutos em sistemas vitais de saúde.</li>
+      <li><strong>Backup & Recuperação:</strong> Implantação completa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.</li>
+      <li><strong>Governança Operacional ITIL:</strong> Implementação da plataforma GLPI para gestão de incidentes, catálogo de serviços e SLAs contratuais.</li>
+      <li><strong>Modernização e Virtualização:</strong> Migração de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V com alta disponibilidade.</li>
+      <li><strong>Segurança e Infraestrutura Web:</strong> Implantação de Proxy Reverso Nginx para isolamento de requisições e agentes corporativos EDR/XDR para resposta a incidentes.</li>
+      <li><strong>Redes Corporativas e Infraestrutura Física:</strong> Projeto e implantação do cabeamento estruturado e redes do novo Centro Médico Unimed; ativação de switches gerenciados com segmentação de VLANs e pontos de acesso UniFi corporativos.</li>
+      <li><strong>Conectividade Segura:</strong> Criação e administração de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando filiais e parceiros.</li>
+      <li><strong>Governança de Software:</strong> Auditoria e otimização de licenciamento Microsoft, além da elaboração de políticas de segurança da informação e POPs operacionais.</li>
+      <li><strong>Sustentação Crítica 24/7:</strong> Operação ininterrupta de sistemas de gestão, motores de autorização e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e prestadores credenciados, atuando também como apoio técnico à DPO na conformidade com a LGPD.</li>
+    </ul>
+  </div>
+
+  <div class="experience-item">
+    <div class="job-header">
+      <span class="company-name">Stratus Telecomunicações – Campo Belo/MG</span>
+      <span class="job-period">03/2023 – 12/2024</span>
+    </div>
+    <div class="job-role">Analista de Telecomunicações Interno</div>
+    <ul>
+      <li><strong>Suporte Técnico Avançado L2/L3:</strong> Atendimento especializado e diagnóstico remoto para redes metropolitanas, corporativas e domésticas em conexões de fibra óptica e rádio.</li>
+      <li><strong>Redes Ópticas EPON/GPON:</strong> Suporte consultivo às equipes externas de campo em questões de looping de rede, expansão de sinal, atenuação óptica, hotspots e contingência.</li>
+      <li><strong>Continuidade de Serviços:</strong> Monitoramento e intervenção rápida em incidentes críticos de infraestrutura óptica (rompimentos de enlaces e falhas de transmissão), assegurando SLAs contratuais de transporte de dados.</li>
+    </ul>
+  </div>
+
+  <!-- FORMAÇÃO ACADÊMICA -->
+  <div class="section-title">Formação Acadêmica & Idiomas</div>
+  <div class="education-item">
+    <span class="edu-degree">Bacharelado em Sistemas de Informação</span> — <span class="edu-inst">Universidade Norte do Paraná (UNOPAR)</span><br>
+    <span style="font-size: 9pt; color: #475569;">Cursando (6º Semestre • Previsão de Conclusão: 2027)</span>
+  </div>
+  <div class="education-item" style="margin-top: 4px;">
+    <span class="edu-degree">Curso Técnico em Informática</span> — <span class="edu-inst">Centro Federal de Educação Tecnológica (CEFET)</span><br>
+    <span style="font-size: 9pt; color: #475569;">Concluído (2023 – 2024)</span>
+  </div>
+  <div style="margin-top: 5px; font-size: 9.5pt; color: #334155;">
+    <strong>Idioma:</strong> Inglês Técnico (Proficiência em leitura e documentações técnicas de infraestrutura e engenharia de software).
+  </div>
+
+</body>
+</html>
