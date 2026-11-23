@@ -227,14 +227,35 @@ export default function InteractiveTerminal() {
         break;
 
       case 'certifications':
+        const official = PORTFOLIO_DATA.certifications.filter((c) => c.type === 'certification');
+        const badges = PORTFOLIO_DATA.certifications.filter((c) => c.type === 'skill_badge');
+
         output = (
-          <div className="space-y-2 text-xs font-mono">
-            <div className="text-emerald-400 font-bold">Certificações Oficiais:</div>
-            {PORTFOLIO_DATA.certifications.map((c) => (
-              <div key={c.id} className="text-slate-300">
-                <span className="text-amber-400 font-bold">[{c.issuer}]</span> {c.title} ({c.date})
+          <div className="space-y-3 text-xs font-mono">
+            <div>
+              <div className="text-emerald-400 font-bold mb-1">🛡️ Certificações Oficiais da Indústria (Exames Formais):</div>
+              <div className="space-y-1 pl-2 border-l border-emerald-500/30">
+                {official.map((c) => (
+                  <div key={c.id} className="text-slate-300">
+                    <span className="text-emerald-400 font-bold">[{c.issuer}]</span> {c.title}{' '}
+                    <span className="text-slate-500">({c.date})</span>
+                    {c.validity && <span className="text-emerald-300 text-[11px] ml-1.5">• {c.validity}</span>}
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div>
+              <div className="text-sky-400 font-bold mb-1">⚡ Skill Badges & Laboratórios Práticos (Hands-On):</div>
+              <div className="space-y-1 pl-2 border-l border-sky-500/30">
+                {badges.map((b) => (
+                  <div key={b.id} className="text-slate-300">
+                    <span className="text-sky-400 font-bold">[{b.issuer}]</span> {b.title}{' '}
+                    <span className="text-slate-500">({b.date})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         );
         break;

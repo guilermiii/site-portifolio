@@ -11,6 +11,8 @@ export interface Project {
   status: 'Production' | 'Active Lab' | 'Complete';
 }
 
+export type CredentialType = 'certification' | 'skill_badge';
+
 export interface Certification {
   id: string;
   title: string;
@@ -21,6 +23,8 @@ export interface Certification {
   badgeUrl?: string;
   credlyUrl: string;
   skills: string[];
+  type: CredentialType;
+  badgeLevel?: string;
 }
 
 export interface PromotionStep {
@@ -178,56 +182,8 @@ export const PORTFOLIO_DATA = {
       validity: 'Válido até 07/10/2028',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['Linux Kernel & CLI', 'System Administration', 'Network Architecture', 'Storage & Security', 'Cloud Fundamentals'],
-    },
-    {
-      id: 'gcp-k8s-deploy',
-      title: 'Deploy Kubernetes Applications on Google Cloud',
-      issuer: 'Google Cloud',
-      code: 'GCP-K8S-DEP',
-      date: '11/2026',
-      validity: 'Credencial Oficial Ativa',
-      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['Google Kubernetes Engine (GKE)', 'Docker Containers', 'Kubectl CLI', 'Continuous Delivery', 'Microservices'],
-    },
-    {
-      id: 'gcp-k8s-manage',
-      title: 'Manage Kubernetes in Google Cloud',
-      issuer: 'Google Cloud',
-      code: 'GCP-K8S-MNG',
-      date: '11/2026',
-      validity: 'Credencial Oficial Ativa',
-      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['GKE Multi-Cluster', 'Workload Optimization', 'Cluster Autoscaling', 'Observability'],
-    },
-    {
-      id: 'gcp-secure-net',
-      title: 'Build a Secure Google Cloud Network',
-      issuer: 'Google Cloud',
-      code: 'GCP-NET-SEC',
-      date: '10/2026',
-      validity: 'Credencial Oficial Ativa',
-      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['Cloud VPC', 'Firewall Rules', 'Private Google Access', 'Cloud Armor', 'Zero-Trust Network'],
-    },
-    {
-      id: 'gcp-load-balancing',
-      title: 'Implement Load Balancing on Compute Engine',
-      issuer: 'Google Cloud',
-      code: 'GCP-LB',
-      date: '10/2026',
-      validity: 'Credencial Oficial Ativa',
-      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['HTTP(S) Load Balancer', 'High Availability', 'Traffic Distribution', 'Compute Engine'],
-    },
-    {
-      id: 'cisco-cyber',
-      title: 'Introduction to Cybersecurity',
-      issuer: 'Cisco',
-      code: 'CISCO-SEC',
-      date: '08/2026',
-      validity: 'Credencial Oficial Ativa',
-      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['Threat Detection', 'Network Defense', 'Data Privacy', 'Security Compliance'],
+      type: 'certification',
+      badgeLevel: 'Exame Oficial Proctored',
     },
     {
       id: 'oci-foundations',
@@ -238,6 +194,8 @@ export const PORTFOLIO_DATA = {
       validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['OCI Core Services', 'VCN & Networking', 'IAM & Security', 'Autonomous Database', 'Storage & Compute'],
+      type: 'certification',
+      badgeLevel: 'Certificação Oficial Associate',
     },
     {
       id: 'oci-ai',
@@ -248,6 +206,8 @@ export const PORTFOLIO_DATA = {
       validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['AI & ML Foundations', 'OCI AI Services', 'Generative AI Concepts', 'Data Science Workflows'],
+      type: 'certification',
+      badgeLevel: 'Certificação Oficial Associate',
     },
     {
       id: 'oracle-agentic-ai',
@@ -258,6 +218,68 @@ export const PORTFOLIO_DATA = {
       validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['Autonomous Agents', 'LLM Orchestration', 'Multi-Agent Workflows', 'Tool Integration'],
+      type: 'certification',
+      badgeLevel: 'Certificação Oficial Associate',
+    },
+    {
+      id: 'gcp-k8s-deploy',
+      title: 'Deploy Kubernetes Applications on Google Cloud',
+      issuer: 'Google Cloud',
+      code: 'GCP-K8S-DEP',
+      date: '11/2026',
+      validity: 'Selo Oficial Conquistado',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Google Kubernetes Engine (GKE)', 'Docker Containers', 'Kubectl CLI', 'Continuous Delivery', 'Microservices'],
+      type: 'skill_badge',
+      badgeLevel: 'Skill Badge Hands-On (GKE)',
+    },
+    {
+      id: 'gcp-k8s-manage',
+      title: 'Manage Kubernetes in Google Cloud',
+      issuer: 'Google Cloud',
+      code: 'GCP-K8S-MNG',
+      date: '11/2026',
+      validity: 'Selo Oficial Conquistado',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['GKE Multi-Cluster', 'Workload Optimization', 'Cluster Autoscaling', 'Observability'],
+      type: 'skill_badge',
+      badgeLevel: 'Skill Badge Hands-On (GKE)',
+    },
+    {
+      id: 'gcp-secure-net',
+      title: 'Build a Secure Google Cloud Network',
+      issuer: 'Google Cloud',
+      code: 'GCP-NET-SEC',
+      date: '10/2026',
+      validity: 'Selo Oficial Conquistado',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Cloud VPC', 'Firewall Rules', 'Private Google Access', 'Cloud Armor', 'Zero-Trust Network'],
+      type: 'skill_badge',
+      badgeLevel: 'Skill Badge Hands-On (VPC)',
+    },
+    {
+      id: 'gcp-load-balancing',
+      title: 'Implement Load Balancing on Compute Engine',
+      issuer: 'Google Cloud',
+      code: 'GCP-LB',
+      date: '10/2026',
+      validity: 'Selo Oficial Conquistado',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['HTTP(S) Load Balancer', 'High Availability', 'Traffic Distribution', 'Compute Engine'],
+      type: 'skill_badge',
+      badgeLevel: 'Skill Badge Hands-On (Traffic)',
+    },
+    {
+      id: 'cisco-cyber',
+      title: 'Introduction to Cybersecurity',
+      issuer: 'Cisco',
+      code: 'CISCO-SEC',
+      date: '08/2026',
+      validity: 'Selo Oficial Conquistado',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Threat Detection', 'Network Defense', 'Data Privacy', 'Security Compliance'],
+      type: 'skill_badge',
+      badgeLevel: 'Academy Digital Badge',
     },
   ] as Certification[],
 
