@@ -49,17 +49,28 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Sanitize Docker Hub Credentials & Image Name
+        id: docker_prep
+        run: |
+          RAW_USER="${{ vars.DOCKERHUB_USERNAME || secrets.DOCKERHUB_USERNAME || 'devguina' }}"
+          CLEAN_USER=$(echo "$RAW_USER" | tr -d '[:space:]')
+          if [ -z "$CLEAN_USER" ]; then
+            CLEAN_USER="devguina"
+          fi
+          echo "username=${CLEAN_USER}" >> "$GITHUB_OUTPUT"
+          echo "image=${CLEAN_USER}/site-portifolio" >> "$GITHUB_OUTPUT"
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ vars.DOCKERHUB_USERNAME || secrets.DOCKERHUB_USERNAME || 'devguina' }}
+          username: ${{ steps.docker_prep.outputs.username }}
           password: ${{ secrets.DOCKERHUB_TOKEN || secrets.DOCKER_PASSWORD }}
 
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ vars.DOCKERHUB_USERNAME || secrets.DOCKERHUB_USERNAME || 'devguina' }}/site-portifolio
+          images: ${{ steps.docker_prep.outputs.image }}
           tags: |
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
             type=ref,event=branch
