@@ -58,13 +58,10 @@ export default function Experience() {
               {exp.promotions && exp.promotions.length > 0 ? (
                 <div className="mt-6 space-y-6">
                   {/* Banner */}
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-transparent border border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <div className="flex items-center space-x-2 text-xs sm:text-sm font-semibold text-emerald-800 dark:text-emerald-300">
-                      <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                      <span>Trilha de Crescimento Interno: 2 Promoções Consecutivas por Mérito e Entregas Críticas</span>
-                    </div>
-                    <span className="text-[11px] font-mono px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-500/30 font-bold tracking-wide w-fit">
-                      PADRÃO OURO DE EVOLUÇÃO
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-transparent border border-emerald-500/30 flex items-center gap-3">
+                    <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                    <span className="text-xs sm:text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      Trilha de Crescimento Interno: 2 Promoções Consecutivas por Mérito e Entregas Críticas
                     </span>
                   </div>
 

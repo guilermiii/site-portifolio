@@ -115,6 +115,19 @@
       color: #0284c7;
       margin-bottom: 1.5px;
     }
+    .subrole-header {
+      margin-top: 3px;
+      margin-bottom: 1px;
+      font-size: 8.6pt;
+      font-weight: bold;
+      color: #0369a1;
+    }
+    .subrole-period {
+      font-size: 8.2pt;
+      color: #475569;
+      font-weight: 600;
+      float: right;
+    }
     ul {
       margin: 1.5px 0 2.5px 0;
       padding-left: 15px;
@@ -230,17 +243,41 @@
       <span class="job-period">02/2025 – 06/2026</span>
       <span class="company-name">Unimed Cooperativa de Trabalho Médico – Campo Belo/MG</span>
     </div>
-    <div class="job-role">Trajetória com 2 Promoções Consecutivas por Mérito: Auxiliar de TI → Analista de Redes → Analista de TI</div>
+    <div class="job-role">Trajetória com 2 Promoções Consecutivas por Mérito (Auxiliar de TI → Analista de Redes → Analista de TI)</div>
+
+    <!-- CARGO 3: ANALISTA DE TI -->
+    <div class="subrole-header">
+      <span class="subrole-period">04/2026 – 06/2026 (2ª Promoção por Mérito • Abril)</span>
+      Analista de TI
+    </div>
     <ul>
-      <li><strong>Redução de RPO:</strong> Otimização do Recovery Point Objective de 24 horas para apenas 10 minutos em sistemas vitais de saúde.</li>
-      <li><strong>Backup & Recuperação:</strong> Implantação corporativa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.</li>
-      <li><strong>Governança Operacional ITIL:</strong> Implementação da plataforma GLPI para gestão de incidentes, catálogo de serviços e SLAs contratuais.</li>
-      <li><strong>Modernização e Virtualização:</strong> Migração de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V com alta disponibilidade.</li>
-      <li><strong>Segurança e Infraestrutura Web:</strong> Implantação de Proxy Reverso Nginx para isolamento de requisições e agentes corporativos EDR/XDR para resposta a incidentes.</li>
-      <li><strong>Redes Corporativas e Infraestrutura Física:</strong> Projeto e implantação do cabeamento estruturado e redes do novo Centro Médico Unimed; ativação de switches gerenciados com segmentação de VLANs e pontos de acesso UniFi corporativos.</li>
-      <li><strong>Conectividade Segura:</strong> Criação e administração de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando filiais e parceiros.</li>
-      <li><strong>Governança de Software:</strong> Auditoria e otimização de licenciamento Microsoft, além da elaboração de políticas de segurança da informação e POPs operacionais.</li>
-      <li><strong>Sustentação Crítica 24/7:</strong> Operação ininterrupta de sistemas de gestão, motores de autorização e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos cooperados, com apoio técnico consultivo à DPO na conformidade com a LGPD.</li>
+      <li><strong>Telemetria e Observabilidade:</strong> Implantação e customização da stack de monitoramento Zabbix 7 LTS para telemetria em tempo real de servidores, switches e serviços críticos.</li>
+      <li><strong>Otimização de Servidores e Licenças:</strong> Otimização avançada de máquinas virtuais e alocação de recursos computacionais nos clusters de virtualização; auditoria e otimização de licenciamento corporativo Microsoft.</li>
+      <li><strong>Modernização do Parque e Governança:</strong> Liderança técnica no planejamento e execução da renovação de 70% de todo o parque de microcomputadores da Unimed; gerenciamento técnico de parceiros estratégicos e fornecedores de tecnologia com controle de SLAs.</li>
+      <li><strong>Sustentação Crítica 24/7 & LGPD:</strong> Sustentação ininterrupta 24/7 de sistemas hospitalares e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos credenciados, com apoio consultivo à DPO na conformidade com a LGPD.</li>
+    </ul>
+
+    <!-- CARGO 2: ANALISTA DE INFRAESTRUTURA DE REDES -->
+    <div class="subrole-header">
+      <span class="subrole-period">04/2025 – 03/2026 (1ª Promoção por Mérito • 1 ano)</span>
+      Analista de Infraestrutura de Redes
+    </div>
+    <ul>
+      <li><strong>Continuidade de Negócio & RPO:</strong> Redução histórica do RPO (Recovery Point Objective) de 24 horas para 10 minutos em sistemas vitais de autorização e gestão médica.</li>
+      <li><strong>Backup Corporativo & Virtualização:</strong> Implantação e administração do Veeam Backup & Replication em todos os servidores críticos com testes semanais de restauração; migração de legados VMware para clusters virtualizados Proxmox VE e Hyper-V de alta disponibilidade.</li>
+      <li><strong>Redes Corporativas e Perímetro:</strong> Projeto e implantação do cabeamento estruturado e redes do novo Centro Médico Unimed; switches L2/L3 com segmentação de VLANs, Wi-Fi UniFi corporativo de alta densidade, túneis VPN IPsec MikroTik RouterOS, Proxy Reverso Nginx e proteção EDR/XDR.</li>
+      <li><strong>Sustentação Crítica 24/7:</strong> Sustentação ininterrupta 24/7 de sistemas hospitalares e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos credenciados.</li>
+    </ul>
+
+    <!-- CARGO 1: AUXILIAR DE TI -->
+    <div class="subrole-header">
+      <span class="subrole-period">02/2025 – 03/2025 (Ingresso na Empresa • 2 meses)</span>
+      Auxiliar de TI
+    </div>
+    <ul>
+      <li><strong>Suporte Técnico & Auditoria de Ativos:</strong> Atendimento ágil a chamados de suporte para usuários internos e prestadores externos; inventário minucioso de ativos de hardware e licenças de software, identificando gargalos e oportunidades de melhoria.</li>
+      <li><strong>Implantação do GLPI & Governança ITIL:</strong> Implantação e parametrização completa da plataforma GLPI estruturada com framework ITIL, definindo catálogos de serviços e SLAs rígidos.</li>
+      <li><strong>Sustentação Crítica 24/7:</strong> Sustentação ininterrupta 24/7 de sistemas hospitalares e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos credenciados.</li>
     </ul>
   </div>
 

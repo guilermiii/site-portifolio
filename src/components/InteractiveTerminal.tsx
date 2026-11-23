@@ -270,8 +270,8 @@ export default function InteractiveTerminal() {
               <div>Contato: guisouzaskill@gmail.com • LinkedIn: guilherme--desouza • GitHub: guilermiii</div>
               <div>Formação: Bacharelado em Sistemas de Informação (UNOPAR - Indo para o último período) | Técnico em Informática (CEFET)</div>
               <div className="text-slate-400 pt-1">
-                Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores) com histórico de 2 promoções consecutivas por mérito na Unimed.
-                Redução comprovada de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / VMware / Hyper-V,
+                Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores) com histórico de 2 promoções consecutivas por mérito na Unimed (Auxiliar ➔ Redes ➔ Analista TI).
+                Implantação de Zabbix 7 LTS, GLPI/ITIL, redução de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / Hyper-V,
                 redes MikroTik / UniFi, homelab Xeon X99 16c/32t 64GB e automação declarativa com Terraform, Kubernetes e Oracle Cloud.
               </div>
               <div className="pt-1 text-emerald-400 font-semibold">
