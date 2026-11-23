@@ -82,7 +82,7 @@ export const PORTFOLIO_DATA = {
     github: 'https://github.com/guilermiii',
     credly: 'https://www.credly.com/users/guilherme-souza.97d0f101',
     resumePdf: '/docs/curriculo-guilherme.pdf',
-    bio: 'Olá, sou o Guilherme de Souza. Estudante de Sistemas de Informação (indo para o último período), entusiasta de DevOps e SRE com sólida experiência em ambientes críticos de infraestrutura On-Premise e telecomunicações. Tenho alta proficiência técnica em infraestrutura, com solidez garantida por estudos pessoais e laboratórios contínuos. Estou preparado tanto para o legado quanto para a infraestrutura moderna Cloud Native, com histórico comprovado de atuação sob pressão em operações ininterruptas 24/7.',
+    bio: 'Olá, sou o Guilherme de Souza. Estudante de Sistemas de Informação (indo para o último período), entusiasta e especialista prático em DevOps e SRE com sólida experiência em ambientes críticos de infraestrutura On-Premise e telecomunicações. Possuo alta proficiência técnica em infraestrutura, redes e automação, com solidez garantida por estudos contínuos e um poderoso homelab bare-metal Xeon X99 com 64 GB RAM. Estou preparado tanto para sustentar o legado quanto para arquitetar a infraestrutura moderna Cloud Native, com histórico comprovado de atuação sob pressão em operações ininterruptas 24/7.',
   },
 
   homelab: {
@@ -287,13 +287,13 @@ export const PORTFOLIO_DATA = {
     {
       company: 'Unimed Cooperativa de Trabalho Médico – Campo Belo/MG',
       role: 'Analista de TI (Trajetória com 2 Promoções Consecutivas)',
-      period: '02/2025 – 06/2026 • 1 ano 5 meses',
+      period: '02/2025 – 25/08/2026 • 1 ano 7 meses',
       location: 'Campo Belo – MG',
       highlight: 'Crescimento acelerado na maior cooperativa médica da região: 2 promoções consecutivas por mérito técnico, liderança na sustentação 24/7 e entregas de missão crítica.',
       promotions: [
         {
           role: 'Analista de TI',
-          period: '04/2026 – 06/2026',
+          period: '04/2026 – 25/08/2026',
           badge: '2ª Promoção por Mérito (Abril)',
           badgeType: 'promotion',
           summary: 'Telemetria avançada, otimização de computação em servidores, gestão de ativos/fornecedores e governança.',

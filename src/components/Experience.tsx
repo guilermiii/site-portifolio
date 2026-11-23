@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, GraduationCap, Globe, TrendingUp } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, GraduationCap, Globe, TrendingUp, Download } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Experience() {
@@ -6,15 +6,30 @@ export default function Experience() {
     <section id="experience" className="py-16 border-t border-slate-200 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-10">
-          <div className="inline-flex items-center space-x-2 text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/30 mb-2">
-            <Briefcase className="w-3.5 h-3.5" />
-            <span>TRAJETÓRIA PROFISSIONAL & IMPACTO</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <div className="inline-flex items-center space-x-2 text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/30 mb-2">
+              <Briefcase className="w-3.5 h-3.5" />
+              <span>TRAJETÓRIA PROFISSIONAL & IMPACTO</span>
+            </div>
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Experiência Corporativa em Alta Criticidade</h2>
+            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 max-w-2xl">
+              Histórico comprovado em sustentação 24/7, modernização de infraestrutura legada e governança ITIL com rápido reconhecimento interno.
+            </p>
           </div>
-          <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Experiência Corporativa em Alta Criticidade</h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-            Histórico comprovado em sustentação 24/7, modernização de infraestrutura legada e governança ITIL com rápido reconhecimento interno.
-          </p>
+
+          {/* Botão Baixar CV */}
+          <a
+            href={PORTFOLIO_DATA.profile.resumePdf}
+            download="curriculo-guilherme-souza.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-sm hover:shadow shrink-0 w-fit"
+            title="Baixar currículo completo em PDF formatado segundo normas ABNT (2 páginas)"
+          >
+            <Download className="w-4 h-4" />
+            <span>Baixar CV (PDF ABNT)</span>
+          </a>
         </div>
 
         {/* Experience Timeline */}

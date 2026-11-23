@@ -31,11 +31,28 @@ export default function Hero() {
                   DevOps & SRE
                 </span>
               </h1>
-              <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                Olá, sou o <span className="font-semibold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
-                Estudante de Sistemas de Informação (indo para o último período), entusiasta de DevOps e SRE com sólida experiência em ambientes críticos de infraestrutura On-Premise e telecomunicações.
-                Tenho alta proficiência técnica com solidez garantida por estudos contínuos. Preparado tanto para sustentar o legado quanto para arquitetar a infraestrutura moderna, habituado a atuar com alta confiabilidade sob pressão 24/7.
-              </p>
+
+              {/* Apresentação Pessoal Formatada e Estruturada */}
+              <div className="mt-4 space-y-3 max-w-2xl text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-base sm:text-lg">
+                  Olá, sou o <span className="font-bold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
+                  Estudante de <span className="font-semibold text-slate-900 dark:text-white">Sistemas de Informação</span> (indo para o último período), entusiasta e praticante de <span className="font-semibold text-emerald-600 dark:text-emerald-400">DevOps & SRE</span> com sólida vivência em ambientes críticos de infraestrutura On-Premise e provedor de telecomunicações.
+                </p>
+                <p className="text-sm sm:text-base">
+                  Possuo alta proficiência técnica em sustentação, redes e automação, com bagagem fortalecida por estudos e laboratórios contínuos. Preparado tanto para manter e evoluir o <span className="font-medium text-slate-800 dark:text-slate-200">legado</span> quanto para arquitetar soluções modernas <span className="font-medium text-slate-800 dark:text-slate-200">Cloud Native</span>, habituado a atuar sob pressão com alta confiabilidade 24/7.
+                </p>
+
+                {/* Callout Formatado: Homelab & Engenharia Prática */}
+                <div className="p-3 sm:p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm text-slate-700 dark:text-slate-300 flex items-start gap-3 shadow-sm">
+                  <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shrink-0 mt-0.5">
+                    <Server className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <span className="font-bold text-slate-900 dark:text-white">Homelab Bare-Metal Enterprise:</span>{' '}
+                    Servidor físico próprio com placa-mãe X99, processador <span className="font-semibold text-emerald-600 dark:text-emerald-400">Intel Xeon E5-2682 v4 (16c/32t)</span> e <span className="font-semibold text-emerald-600 dark:text-emerald-400">64 GB RAM DDR4 ECC</span>, dedicado a estudos avançados de SRE, testes de estresse, simulações de resiliência e validação de arquiteturas.
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Quick Metrics Cards */}
