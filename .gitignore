@@ -28,3 +28,8 @@ dist-ssr
 .env
 .env.local
 .env.production
+
+# Root documents / resumes
+/*.pdf
+/Guilherme - Infraestrutura.pdf
+
