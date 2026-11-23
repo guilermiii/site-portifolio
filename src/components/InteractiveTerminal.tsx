@@ -21,6 +21,8 @@ export default function InteractiveTerminal() {
           <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
           <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
           <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
+          <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR) • Técnico Informática (CEFET)</div>
+          <div><span className="text-sky-400">Localização:</span> Campo Belo – MG (Disponibilidade para Mudança e Remoto)</div>
           <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
           <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
           <div className="text-slate-400 pt-1">💡 Digite <span className="text-emerald-400">help</span> para ver a lista de comandos interativos.</div>
@@ -99,6 +101,8 @@ export default function InteractiveTerminal() {
             <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
             <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
             <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
+            <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR) • Técnico Informática (CEFET)</div>
+            <div><span className="text-sky-400">Localização:</span> Campo Belo – MG (Disponibilidade para Mudança e Remoto)</div>
             <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
             <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
           </div>
@@ -213,13 +217,14 @@ export default function InteractiveTerminal() {
         if (args.includes('cv') || args.includes('resume')) {
           output = (
             <div className="text-xs font-mono space-y-1 text-slate-300">
-              <div className="text-emerald-400 font-bold">GUILHERME DE SOUZA — CURRÍCULO EXECUTIVO</div>
-              <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica & On-Premise</div>
-              <div>Localização: Brasil • E-mail: guisouzaskill@gmail.com</div>
+              <div className="text-emerald-400 font-bold">GUILHERME DE SOUZA MIZAEL DE MORAIS — CURRÍCULO EXECUTIVO</div>
+              <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica On-Premise & Cloud</div>
+              <div>Localização: Campo Belo – MG (Disponibilidade para Mudança e Remoto) • E-mail: guisouzaskill@gmail.com</div>
+              <div>Formação: Bacharelado em Sistemas de Informação (UNOPAR - Cursando) | Técnico em Informática (CEFET)</div>
               <div className="text-slate-400 pt-1">
-                Especialista em sustentação de ambientes de alta disponibilidade 24/7 (140+ hospitais),
-                automação declarativa de infraestrutura com Terraform, Kubernetes, Proxmox VE, Veeam Backup e Oracle Cloud.
-                RPO reduzido de 24h para 10 minutos.
+                Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores),
+                redução de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / VMware,
+                redes MikroTik / UniFi e automação declarativa com Terraform, Kubernetes e Oracle Cloud.
               </div>
               <div className="pt-1">
                 <a

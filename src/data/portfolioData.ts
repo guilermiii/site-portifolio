@@ -32,13 +32,23 @@ export interface Experience {
   techStack: string[];
 }
 
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  period: string;
+  status: string;
+  details: string;
+}
+
 export const PORTFOLIO_DATA = {
   profile: {
     name: 'Guilherme de Souza',
+    fullName: 'Guilherme de Souza Mizael de Morais',
     handle: 'guilermiii',
     title: 'DevOps Engineer & SRE | Infraestrutura Crítica & On-Premise',
     headline: 'Confiabilidade, Automação IaC e Arquiteturas Híbridas & Cloud Native',
-    location: 'Brasil',
+    location: 'Campo Belo – MG (Disponibilidade para Mudança e Remoto)',
     status: 'Operational',
     statusText: 'Disponível para Projetos Críticos & Oportunidades',
     email: 'guisouzaskill@gmail.com',
@@ -46,7 +56,7 @@ export const PORTFOLIO_DATA = {
     github: 'https://github.com/guilermiii',
     credly: 'https://www.credly.com/users/guilherme-souza.97d0f101',
     resumePdf: '/docs/curriculo-guilherme.pdf',
-    bio: 'Profissional de Infraestrutura Crítica (On-Premise & Cloud), DevOps e SRE com sólida experiência em sustentação 24/7 para ambientes hospitalares de alta complexidade. Especialista em virtualização bare-metal, automação declarativa (Terraform, Ansible), conteinerização (Docker, Kubernetes), nuvem (Oracle Cloud OCI e AWS) e arquiteturas resilientes com redução expressiva de RPO/RTO.',
+    bio: 'Profissional de Tecnologia com sólida atuação em ambientes de missão crítica de alta complexidade (24/7), especializado na gestão, segurança e modernização de infraestrutura on-premises e em nuvem. Experiência comprovada na redução de RPO de 24h para 10 min, backup corporativo com Veeam, virtualização bare-metal (Proxmox VE, VMware, Hyper-V), redes gerenciadas multi-vendor (MikroTik, UniFi, switches L2/L3), governança operacional ITIL com GLPI, automação declarativa com Terraform, conteinerização Docker/Kubernetes e nuvem OCI/AWS.',
   },
 
   telemetry: [
@@ -160,38 +170,58 @@ export const PORTFOLIO_DATA = {
 
   experience: [
     {
-      company: 'Unimed Cooperativa de Trabalho Médico',
-      role: 'Analista de Infraestrutura & Operações 24/7',
-      period: 'Atuação Recente',
-      location: 'Brasil',
-      highlight: 'Sustentação contínua de missão crítica para ecossistema hospitalar de saúde com mais de 140 hospitais e prestadores.',
+      company: 'Unimed Cooperativa de Trabalho Médico – Campo Belo/MG',
+      role: 'Auxiliar de TI → Analista de Infraestrutura de Redes → Analista de TI',
+      period: '02/2025 – 06/2026',
+      location: 'Campo Belo – MG',
+      highlight: 'Sustentação contínua 24/7 de ecossistema hospitalar de saúde, governança ITIL e modernização de infraestrutura on-premises para mais de 140 hospitais e prestadores credenciados.',
       achievements: [
         'Redução drástica do RPO (Recovery Point Objective) de 24 horas para apenas 10 minutos em sistemas de saúde vitais.',
-        'Implantação do Veeam Backup & Replication para proteção e recuperação automatizada de dados de missão crítica.',
+        'Implantação completa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.',
         'Migração e modernização de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V com alta disponibilidade.',
-        'Documentação completa de toda a infraestrutura física e virtualizada, além de um inventário detalhado de todos os ativos e licenças de software.',
-        'Otimização de licenças Microsoft, garantindo conformidade contratual e controle de custos operacionais.',
-        'Criação de políticas de segurança da informação, runbooks técnicos e Procedimentos Operacionais Padrão (POPs).',
-        'Implementação de governança operacional alinhada ao framework ITIL via plataforma GLPI.',
-        'Fortalecimento da postura de segurança cibernética com implantação de agentes EDR/XDR corporativos e Proxy Reverso Nginx.',
-        'Gerenciamento de redes corporativas: switches gerenciados, APs UniFi e túneis VPN IPsec site-to-site com MikroTik RouterOS.',
+        'Implantação da plataforma GLPI para gestão de incidentes, catálogo de serviços e SLAs contratuais alinhados ao framework ITIL.',
+        'Projeto e execução de cabeamento estruturado e infraestrutura de rede completa para o novo Centro Médico Unimed.',
+        'Reestruturação de rede lógica com switches gerenciados, segmentação de VLANs e pontos de acesso UniFi corporativos.',
+        'Criação e gerenciamento de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando unidades e parceiros.',
+        'Auditoria e otimização de licenciamento Microsoft 365 e Windows Server, além da elaboração de políticas de segurança da informação e POPs operacionais.',
+        'Implantação de Proxy Reverso Nginx e proteção cibernética corporativa com agentes EDR/XDR.',
+        'Sustentação crítica 24/7 de sistemas de autorização hospitalar, gestão e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e prestadores credenciados, atuando como apoio técnico à DPO na LGPD.',
       ],
-      techStack: ['Proxmox VE', 'VMware', 'Hyper-V', 'Veeam Backup & Replication', 'MikroTik RouterOS', 'UniFi', 'Nginx', 'ITIL/GLPI', 'Licenciamento Microsoft', 'POPs & Runbooks', 'EDR/XDR', 'Linux'],
+      techStack: ['Proxmox VE', 'VMware ESXi', 'Hyper-V', 'Veeam Backup & Replication', 'MikroTik RouterOS', 'UniFi Enterprise', 'Switches Gerenciados', 'VLANs', 'Proxy Reverso Nginx', 'ITIL / GLPI', 'Microsoft 365', 'EDR/XDR', 'Linux Server', 'LGPD'],
     },
     {
-      company: 'Stratus Telecomunicações',
-      role: 'Suporte Avançado & Infraestrutura de Redes',
-      period: 'Experiência Anterior',
-      location: 'Brasil',
-      highlight: 'Atuação em redes de telecomunicações de alta capacidade e infraestrutura de transporte.',
+      company: 'Stratus Telecomunicações – Campo Belo/MG',
+      role: 'Analista de Telecomunicações Interno',
+      period: '03/2023 – 12/2024',
+      location: 'Campo Belo – MG',
+      highlight: 'Suporte avançado L2/L3 para redes de transporte metropolitano e infraestrutura óptica de alta densidade.',
       achievements: [
-        'Suporte corporativo nível avançado para redes metropolitanas e links dedicados.',
-        'Operação e diagnóstico em infraestrutura óptica de alta densidade baseada em tecnologias EPON e GPON.',
-        'Monitoramento contínuo de latência, jitter e taxa de perda de pacotes garantindo cumprimento de SLAs contratuais.',
+        'Suporte técnico corporativo avançado L2/L3 para redes metropolitanas, corporativas e domésticas em conexões de fibra óptica e rádio.',
+        'Suporte consultivo e diagnóstico a equipes externas de campo em redes EPON e GPON, tratamento de looping de rede, atenuação óptica, expansão de sinal e hotspots.',
+        'Atuação direta em contingência e incidentes críticos de infraestrutura óptica (rompimentos de fibras e falhas de transmissão), garantindo cumprimento de SLAs contratuais de transporte de dados.',
       ],
-      techStack: ['Redes EPON/GPON', 'Switches L2/L3', 'Roteamento IP', 'QoS', 'SLA Monitoring', 'Telecom'],
+      techStack: ['Redes EPON / GPON', 'Switches L2/L3', 'Roteamento IP', 'Fibra Óptica', 'QoS & SLA', 'Diagnóstico L2/L3', 'Telecom'],
     },
   ] as Experience[],
+
+  education: [
+    {
+      id: 'unopar',
+      institution: 'Universidade Norte do Paraná (UNOPAR)',
+      degree: 'Bacharelado em Sistemas de Informação',
+      period: '2024 – 2027 (Previsão de Conclusão)',
+      status: 'Cursando (6º Semestre)',
+      details: 'Formação superior com ênfase em Engenharia de Software, Arquitetura de Sistemas Distribuídos, Redes, Governança de TI e Banco de Dados.',
+    },
+    {
+      id: 'cefet',
+      institution: 'Centro Federal de Educação Tecnológica (CEFET)',
+      degree: 'Curso Técnico em Informática',
+      period: '2023 – 2024',
+      status: 'Concluído',
+      details: 'Formação técnica sólida em Redes de Computadores, Sistemas Operacionais, Arquitetura de Hardware e Manutenção de Infraestrutura.',
+    },
+  ] as Education[],
 
   skills: [
     {

@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin, CheckCircle2, Building2 } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, GraduationCap, Globe } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Experience() {
@@ -80,6 +80,53 @@ export default function Experience() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Education & Academic Formation */}
+        <div className="mt-14 pt-10 border-t border-slate-200 dark:border-slate-800">
+          <div className="mb-8">
+            <div className="inline-flex items-center space-x-2 text-xs font-mono text-sky-700 dark:text-sky-400 bg-sky-500/10 dark:bg-sky-950/40 px-3 py-1 rounded-full border border-sky-500/30 mb-2">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>FORMAÇÃO ACADÊMICA & QUALIFICAÇÃO</span>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Educação Superior & Técnica</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
+              Base acadêmica em computação e aperfeiçoamento contínuo em sistemas e infraestrutura.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {PORTFOLIO_DATA.education.map((edu) => (
+              <div
+                key={edu.id}
+                className="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-sky-500/40 transition shadow-sm flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full bg-sky-500/10 text-sky-700 dark:text-sky-300 border border-sky-500/20">
+                      {edu.status}
+                    </span>
+                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{edu.period}</span>
+                  </div>
+
+                  <h4 className="text-lg font-bold text-slate-900 dark:text-white mt-2">{edu.degree}</h4>
+                  <div className="text-sm font-medium text-slate-700 dark:text-slate-300 mt-0.5">{edu.institution}</div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">{edu.details}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Idioma Pill Card */}
+          <div className="mt-4 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/60 flex items-center justify-between text-xs font-mono text-slate-700 dark:text-slate-300">
+            <div className="flex items-center space-x-2">
+              <Globe className="w-4 h-4 text-sky-600 dark:text-sky-400" />
+              <span><strong>Idioma:</strong> Inglês Técnico</span>
+            </div>
+            <span className="text-slate-500 dark:text-slate-400 text-[11px]">
+              Leitura fluente de documentações, RFCs, manuais e repositórios internacionais
+            </span>
+          </div>
         </div>
       </div>
     </section>
