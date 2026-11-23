@@ -378,8 +378,8 @@ export const PORTFOLIO_DATA = {
       id: 'unopar',
       institution: 'Universidade Norte do Paraná (UNOPAR)',
       degree: 'Bacharelado em Sistemas de Informação',
-      period: '2024 – 2027 (Previsão)',
-      status: 'Cursando (Indo para o Último Período)',
+      period: '2024 – 1º Semestre de 2027 (Previsão)',
+      status: 'Cursando (Previsão no 1º Semestre de 2027 • Cursará o Último Período)',
       details: 'Formação superior com ênfase em Engenharia de Software, Arquitetura de Sistemas Distribuídos, Redes, Governança de TI e Banco de Dados.',
     },
     {
@@ -388,7 +388,7 @@ export const PORTFOLIO_DATA = {
       degree: 'Curso Técnico em Informática',
       period: '2023 – 2024',
       status: 'Concluído',
-      details: 'Formação técnica sólida em Redes de Computadores, Sistemas Operacionais, Arquitetura de Hardware e Manutenção de Infraestrutura.',
+      details: 'Formação técnica sólida em Redes de Computadores, Sistemas Operacionais, Arquitetura de Hardware e Manutenção de Infraestrutura. Carga Horária: 1.320 horas.',
     },
   ] as Education[],
 
