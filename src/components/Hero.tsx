@@ -1,16 +1,7 @@
-import { useState } from 'react';
-import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Copy, Check, Server, Activity, Cpu } from 'lucide-react';
+import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Server, Activity, Cpu, Mail } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Hero() {
-  const [copied, setCopied] = useState(false);
-
-  const copyEmail = () => {
-    navigator.clipboard.writeText(PORTFOLIO_DATA.profile.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   return (
     <section id="overview" className="relative pt-12 pb-16 overflow-hidden">
       {/* Background Glow Accents */}
@@ -24,7 +15,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-2">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 dark:bg-emerald-950/60 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
-                <span>STATUS: OPERACIONAL 24/7</span>
+                <span>DISPONÍVEL: PRESENCIAL OU REMOTO • MUDANÇA & INÍCIO IMEDIATO</span>
               </div>
               <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-500/10 dark:bg-sky-950/60 border border-sky-500/30 text-sky-700 dark:text-sky-400">
                 <Shield className="w-3.5 h-3.5" />
@@ -76,13 +67,13 @@ export default function Hero() {
                 <span>Testar Terminal Interativo</span>
               </a>
 
-              <button
-                onClick={copyEmail}
-                className="inline-flex items-center space-x-2 px-4 py-3 rounded-xl text-sm font-mono bg-white dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition shadow-sm"
+              <a
+                href="#contact"
+                className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl font-semibold text-sm bg-white dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition shadow-sm"
               >
-                {copied ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                <span>{copied ? 'E-mail copiado!' : 'Copiar E-mail'}</span>
-              </button>
+                <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span>Contatar</span>
+              </a>
             </div>
 
             {/* Social Links */}

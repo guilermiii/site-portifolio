@@ -245,21 +245,16 @@ export default function InteractiveTerminal() {
             <div className="text-xs font-mono space-y-1 text-slate-300">
               <div className="text-emerald-400 font-bold">GUILHERME DE SOUZA MIZAEL DE MORAIS — CURRÍCULO EXECUTIVO</div>
               <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica On-Premise & Cloud</div>
-              <div>Localização: Campo Belo – MG (Disponibilidade para Mudança e Remoto) • E-mail: guisouzaskill@gmail.com</div>
+              <div>Localização: Campo Belo – MG (Disponível: Presencial ou Remoto • Mudança e Início Imediato)</div>
+              <div>Contato: guisouzaskill@gmail.com • LinkedIn: guilherme--desouza • GitHub: guilermiii</div>
               <div>Formação: Bacharelado em Sistemas de Informação (UNOPAR - Indo para o último período) | Técnico em Informática (CEFET)</div>
               <div className="text-slate-400 pt-1">
                 Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores) com histórico de 2 promoções consecutivas por mérito na Unimed.
                 Redução comprovada de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / VMware / Hyper-V,
                 redes MikroTik / UniFi, homelab Xeon X99 16c/32t 64GB e automação declarativa com Terraform, Kubernetes e Oracle Cloud.
               </div>
-              <div className="pt-1">
-                <a
-                  href={PORTFOLIO_DATA.profile.resumePdf}
-                  download="curriculo-guilherme.pdf"
-                  className="inline-block px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded border border-emerald-500/30 font-bold hover:bg-emerald-500/30"
-                >
-                  📥 Clique para baixar o PDF completo
-                </a>
+              <div className="pt-1 text-emerald-400 font-semibold">
+                📍 Disponível para atuação presencial ou remota, com total disponibilidade para mudança e início imediato.
               </div>
             </div>
           );

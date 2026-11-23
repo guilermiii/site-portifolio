@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Github, Download, Copy, Check, MessageSquare, Award } from 'lucide-react';
+import { Mail, Linkedin, Github, Copy, Check, MessageSquare, Award } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function ContactSection() {
@@ -25,11 +25,10 @@ export default function ContactSection() {
                 <span>COMUNICAÇÃO DIRETA & CONEXÃO</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-                Pronto para Elevar a Confiabilidade da sua Infraestrutura?
+                Vamos Conversar?
               </h2>
               <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                Estou disponível para atuar em desafios de alta complexidade em Engenharia de DevOps,
-                SRE, arquitetura na Oracle Cloud (OCI) / AWS e automação com Kubernetes e Terraform.
+                Disponível para atuação presencial ou remota, com total disponibilidade para mudança e início imediato.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-3">
@@ -52,6 +51,21 @@ export default function ContactSection() {
             </div>
 
             <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+              {/* E-mail Card */}
+              <a
+                href={`mailto:${PORTFOLIO_DATA.profile.email}`}
+                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 hover:bg-white dark:hover:bg-slate-900 transition flex flex-col justify-between group shadow-sm"
+              >
+                <div className="flex items-center justify-between">
+                  <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                  <span className="text-[10px] text-slate-500">Contato Direto</span>
+                </div>
+                <div className="mt-3">
+                  <div className="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">E-mail</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">{PORTFOLIO_DATA.profile.email}</div>
+                </div>
+              </a>
+
               {/* LinkedIn Card */}
               <a
                 href={PORTFOLIO_DATA.profile.linkedin}
@@ -83,22 +97,6 @@ export default function ContactSection() {
                 <div className="mt-3">
                   <div className="font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition">GitHub</div>
                   <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">github.com/guilermiii</div>
-                </div>
-              </a>
-
-              {/* Resume Card */}
-              <a
-                href={PORTFOLIO_DATA.profile.resumePdf}
-                download="curriculo-guilherme.pdf"
-                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 hover:bg-white dark:hover:bg-slate-900 transition flex flex-col justify-between group shadow-sm"
-              >
-                <div className="flex items-center justify-between">
-                  <Download className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                  <span className="text-[10px] text-slate-500">Download PDF</span>
-                </div>
-                <div className="mt-3">
-                  <div className="font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition">Currículo</div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">Versão Atualizada</div>
                 </div>
               </a>
 

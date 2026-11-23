@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Terminal, Download, Mail, Check, Menu, X, Sun, Moon } from 'lucide-react';
-import { PORTFOLIO_DATA } from '../data/portfolioData';
+import { Terminal, Mail, Menu, X, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -8,14 +7,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
-  const [copied, setCopied] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const copyEmail = () => {
-    navigator.clipboard.writeText(PORTFOLIO_DATA.profile.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/90 dark:bg-[#0a0e17]/85 backdrop-blur-md transition-colors">
@@ -59,22 +51,12 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
-          <button
-            onClick={copyEmail}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-200 transition shadow-sm"
-            title="Copiar e-mail"
-          >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Mail className="w-3.5 h-3.5 text-slate-500" />}
-            <span>{copied ? 'Copiado!' : 'E-mail'}</span>
-          </button>
-
           <a
-            href={PORTFOLIO_DATA.profile.resumePdf}
-            download="curriculo-guilherme.pdf"
-            className="flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-sm shadow-emerald-500/20"
+            href="#contact"
+            className="flex items-center space-x-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition shadow-sm shadow-emerald-500/20"
           >
-            <Download className="w-3.5 h-3.5" />
-            <span>Baixar CV</span>
+            <Mail className="w-3.5 h-3.5" />
+            <span>Contatar</span>
           </a>
         </div>
 
@@ -106,19 +88,13 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             <a onClick={() => setMobileMenuOpen(false)} href="#experience" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Experiência</a>
             <a onClick={() => setMobileMenuOpen(false)} href="#certifications" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Certificações</a>
           </div>
-          <div className="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center space-x-2">
-            <button
-              onClick={copyEmail}
-              className="flex-1 py-2 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center text-slate-800 dark:text-slate-200"
-            >
-              {copied ? 'E-mail Copiado!' : 'Copiar E-mail'}
-            </button>
+          <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
             <a
-              href={PORTFOLIO_DATA.profile.resumePdf}
-              download
-              className="flex-1 py-2 rounded-lg text-xs font-semibold bg-emerald-500 text-slate-950 text-center"
+              onClick={() => setMobileMenuOpen(false)}
+              href="#contact"
+              className="w-full py-2.5 rounded-lg text-xs font-semibold bg-emerald-500 text-slate-950 text-center block shadow-sm"
             >
-              Baixar CV (PDF)
+              Contatar
             </a>
           </div>
         </div>
