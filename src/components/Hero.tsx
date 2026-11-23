@@ -1,4 +1,4 @@
-import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Server, Activity, Cpu, Mail } from 'lucide-react';
+import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Mail } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Hero() {
@@ -41,17 +41,6 @@ export default function Hero() {
                 <p className="text-sm sm:text-base">
                   Possuo alta proficiência técnica em sustentação, redes e automação, com bagagem fortalecida por estudos e laboratórios contínuos. Preparado tanto para manter e evoluir o <span className="font-medium text-slate-800 dark:text-slate-200">legado</span> quanto para arquitetar soluções modernas <span className="font-medium text-slate-800 dark:text-slate-200">Cloud Native</span>, habituado a atuar sob pressão com alta confiabilidade 24/7.
                 </p>
-
-                {/* Callout Formatado: Homelab & Engenharia Prática */}
-                <div className="p-3 sm:p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm text-slate-700 dark:text-slate-300 flex items-start gap-3 shadow-sm">
-                  <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shrink-0 mt-0.5">
-                    <Server className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-900 dark:text-white">Homelab Bare-Metal Enterprise:</span>{' '}
-                    Servidor físico próprio com placa-mãe X99, processador <span className="font-semibold text-emerald-600 dark:text-emerald-400">Intel Xeon E5-2682 v4 (16c/32t)</span> e <span className="font-semibold text-emerald-600 dark:text-emerald-400">64 GB RAM DDR4 ECC</span>, dedicado a estudos avançados de SRE, testes de estresse, simulações de resiliência e validação de arquiteturas.
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -126,85 +115,43 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Live Infrastructure Node Status Widget */}
+          {/* Right Column: Terminal Console Preview */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/80 p-5 shadow-2xl backdrop-blur-sm relative space-y-4">
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
-                <div className="flex items-center space-x-2.5">
-                  <div className="w-3 h-3 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></div>
-                  <span className="text-xs font-mono font-semibold text-slate-800 dark:text-slate-200">CLUSTER OCI & PROXMOX NODES</span>
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-[#070b12] p-5 shadow-2xl backdrop-blur-sm relative space-y-3 font-mono text-xs">
+              <div className="flex items-center justify-between pb-2.5 border-b border-slate-800">
+                <div className="flex items-center space-x-2">
+                  <span className="w-3 h-3 rounded-full bg-red-500/80"></span>
+                  <span className="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                  <span className="w-3 h-3 rounded-full bg-green-500/80"></span>
+                  <span className="ml-2 text-slate-400 text-xs">guilherme@oci-bastion:~</span>
                 </div>
-                <span className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">
-                  HEALTH: OK
+                <span className="text-[11px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20 font-semibold">
+                  CLI LIVE
                 </span>
               </div>
 
-              {/* Node List */}
-              <div className="space-y-2.5 text-xs font-mono">
-                {/* Node 1 */}
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center space-x-2.5">
-                    <Server className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    <div>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200">oci-ampere-k8s-master</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">ARM64 Ampere A1 • 4 OCPUs • 24GB</div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">READY</span>
-                    <div className="text-[10px] text-slate-400 dark:text-slate-500">load: 0.18</div>
+              <div className="space-y-3.5 pt-1">
+                <div>
+                  <div className="text-emerald-400">$ kubectl get nodes -o wide</div>
+                  <div className="text-slate-400 text-[11px] mt-1 overflow-x-auto whitespace-pre">
+NAME            STATUS   ROLES           AGE    VERSION   INTERNAL-IP
+oci-arm-k8s-01  Ready    control-plane   180d   v1.31.2   10.0.10.12
+oci-arm-k8s-02  Ready    worker          180d   v1.31.2   10.0.10.15
                   </div>
                 </div>
 
-                {/* Node 2 */}
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center space-x-2.5">
-                    <Activity className="w-4 h-4 text-sky-600 dark:text-sky-400" />
-                    <div>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200">oci-monitoring-frontend</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">FastAPI + Redis 7 + Prometheus</div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-sky-600 dark:text-sky-400 font-bold">&lt; 3ms</span>
-                    <div className="text-[10px] text-slate-400 dark:text-slate-500">cache hit 99.4%</div>
-                  </div>
-                </div>
-
-                {/* Node 3 */}
-                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
-                  <div className="flex items-center space-x-2.5">
-                    <Cpu className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-                    <div>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200">pve-homelab-x99-server</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Intel Xeon E5-2682v4 (16c/32t) • 64GB DDR4 ECC</div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">ONLINE</span>
-                    <div className="text-[10px] text-slate-400 dark:text-slate-500">Proxmox VE 8 • K3s Lab</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Terminal Quick Peek Preview */}
-              <div className="rounded-xl bg-[#070b12] p-3.5 border border-slate-300 dark:border-slate-800/80 font-mono text-xs text-slate-300">
-                <div className="flex items-center space-x-1.5 text-slate-400 text-[10px] pb-1 border-b border-slate-800">
-                  <span className="w-2 h-2 rounded-full bg-red-500/80"></span>
-                  <span className="w-2 h-2 rounded-full bg-yellow-500/80"></span>
-                  <span className="w-2 h-2 rounded-full bg-green-500/80"></span>
-                  <span className="ml-2">bash - session</span>
-                </div>
-                <div className="pt-2 text-emerald-400">$ kubectl get nodes -o wide</div>
-                <div className="text-slate-400 text-[11px] mt-1 overflow-x-auto whitespace-pre">
-NAME            STATUS   ROLES           AGE    VERSION
-oci-arm-k8s-01  Ready    control-plane   180d   v1.31.2
-oci-arm-k8s-02  Ready    worker          180d   v1.31.2
-                </div>
-                <div className="pt-2 text-emerald-400">$ terraform plan -compact-warnings</div>
-                <div className="text-emerald-300 text-[11px] mt-0.5">
+                <div>
+                  <div className="text-emerald-400">$ terraform plan -compact-warnings</div>
+                  <div className="text-emerald-300 text-[11px] mt-0.5">
 Plan: 0 to add, 0 to change, 0 to destroy. Infrastructure up-to-date.
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-emerald-400">$ zabbix_get -s 10.0.10.1 -k agent.ping</div>
+                  <div className="text-sky-400 text-[11px] mt-0.5">
+1 (All Healthcare & On-Premise Services Operational 24/7)
+                  </div>
                 </div>
               </div>
             </div>
