@@ -35,14 +35,14 @@ export default function Hero() {
             {/* Title & Headline */}
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                Infraestrutura Crítica,{' '}
+                Infraestrutura Crítica, On-Premise,{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-sky-500 dark:from-emerald-400 dark:via-teal-300 dark:to-sky-400">
                   DevOps & SRE
                 </span>
               </h1>
               <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
                 Olá, sou <span className="font-semibold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
-                Analista de Infraestrutura e Engenheiro DevOps focado em alta disponibilidade,
+                Analista de Infraestrutura (On-Premise & Cloud) e Engenheiro DevOps focado em alta disponibilidade,
                 orquestração de contêineres, automação declarativa com Terraform e sustentação de missão crítica.
               </p>
             </div>

@@ -36,8 +36,8 @@ export const PORTFOLIO_DATA = {
   profile: {
     name: 'Guilherme de Souza',
     handle: 'guilermiii',
-    title: 'DevOps Engineer & SRE | Analista de Infraestrutura Crítica',
-    headline: 'Confiabilidade, Automação IaC e Arquiteturas Cloud Native',
+    title: 'DevOps Engineer & SRE | Infraestrutura Crítica & On-Premise',
+    headline: 'Confiabilidade, Automação IaC e Arquiteturas Híbridas & Cloud Native',
     location: 'Brasil',
     status: 'Operational',
     statusText: 'Disponível para Projetos Críticos & Oportunidades',
@@ -46,7 +46,7 @@ export const PORTFOLIO_DATA = {
     github: 'https://github.com/guilermiii',
     credly: 'https://www.credly.com/users/guilherme-souza.97d0f101',
     resumePdf: '/docs/curriculo-guilherme.pdf',
-    bio: 'Profissional de Infraestrutura Crítica, DevOps e SRE com sólida experiência em sustentação 24/7 para ambientes hospitalares de alta complexidade. Especialista em automação de infraestrutura declarativa (Terraform, Ansible), conteinerização (Docker, Kubernetes), nuvem (Oracle Cloud OCI e AWS) e arquiteturas resilientes com redução expressiva de RPO/RTO.',
+    bio: 'Profissional de Infraestrutura Crítica (On-Premise & Cloud), DevOps e SRE com sólida experiência em sustentação 24/7 para ambientes hospitalares de alta complexidade. Especialista em virtualização bare-metal, automação declarativa (Terraform, Ansible), conteinerização (Docker, Kubernetes), nuvem (Oracle Cloud OCI e AWS) e arquiteturas resilientes com redução expressiva de RPO/RTO.',
   },
 
   telemetry: [

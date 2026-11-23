@@ -20,7 +20,7 @@ export default function InteractiveTerminal() {
           <div><span className="text-sky-400">Host:</span> Oracle Cloud Always Free (Ampere A1 ARM64) + Proxmox VE</div>
           <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
           <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
-          <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infra Analyst</div>
+          <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
           <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
           <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
           <div className="text-slate-400 pt-1">💡 Digite <span className="text-emerald-400">help</span> para ver a lista de comandos interativos.</div>
@@ -83,7 +83,7 @@ export default function InteractiveTerminal() {
       case 'whoami':
         output = (
           <div className="text-xs font-mono text-slate-300">
-            <span className="text-emerald-400 font-bold">guilherme de souza</span> — DevOps Engineer & SRE (guilermiii)
+            <span className="text-emerald-400 font-bold">guilherme de souza</span> — DevOps & SRE | Infraestrutura On-Premise & Cloud (guilermiii)
           </div>
         );
         break;
@@ -98,7 +98,7 @@ export default function InteractiveTerminal() {
             <div><span className="text-sky-400">Host:</span> Oracle Cloud Always Free (Ampere A1 ARM64) + Proxmox VE</div>
             <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
             <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
-            <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infra Analyst</div>
+            <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
             <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
             <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
           </div>
@@ -214,7 +214,7 @@ export default function InteractiveTerminal() {
           output = (
             <div className="text-xs font-mono space-y-1 text-slate-300">
               <div className="text-emerald-400 font-bold">GUILHERME DE SOUZA — CURRÍCULO EXECUTIVO</div>
-              <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica</div>
+              <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica & On-Premise</div>
               <div>Localização: Brasil • E-mail: guisouzaskill@gmail.com</div>
               <div className="text-slate-400 pt-1">
                 Especialista em sustentação de ambientes de alta disponibilidade 24/7 (140+ hospitais),

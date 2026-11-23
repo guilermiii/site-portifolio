@@ -17,10 +17,10 @@ export default function Footer() {
             </div>
             <div>
               <div className="text-slate-900 dark:text-slate-200 font-bold">
-                {PORTFOLIO_DATA.profile.name} • <span className="text-emerald-600 dark:text-emerald-400">DevOps & SRE</span>
+                {PORTFOLIO_DATA.profile.name} • <span className="text-emerald-600 dark:text-emerald-400">DevOps, SRE & Infra On-Premise</span>
               </div>
               <div className="text-slate-500 dark:text-slate-400 text-[11px]">
-                Oracle Cloud Infrastructure • Kubernetes • Terraform • Proxmox VE
+                Infraestrutura On-Premise & Cloud • Kubernetes • Terraform • Proxmox VE
               </div>
             </div>
           </div>
