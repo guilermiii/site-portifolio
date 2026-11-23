@@ -7,7 +7,7 @@
 
 set -euo pipefail
 
-IMAGE_NAME="${1:-oci-site-portifolio}"
+IMAGE_NAME="${1:-devguina/site-portifolio}"
 IMAGE_TAG="${2:-latest}"
 FULL_IMAGE="${IMAGE_NAME}:${IMAGE_TAG}"
 
@@ -40,6 +40,6 @@ docker buildx build \
 
 echo "=========================================================="
 echo " ✅ Build Multi-Arch concluído com sucesso!"
-echo " 💡 Para publicar em um registry (ex: GHCR ou Docker Hub):"
-echo "    docker buildx build --platform linux/amd64,linux/arm64 -t <registry>/<user>/${FULL_IMAGE} --push ."
+echo " 💡 Para publicar no Docker Hub:"
+echo "    docker buildx build --platform linux/amd64,linux/arm64 -t ${FULL_IMAGE} --push ."
 echo "=========================================================="
