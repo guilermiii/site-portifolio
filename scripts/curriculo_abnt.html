@@ -6,12 +6,12 @@
   <style>
     @page {
       size: A4;
-      margin: 1.8cm 2.0cm 1.8cm 2.0cm;
+      margin: 1.1cm 1.4cm 1.1cm 1.4cm;
     }
     body {
-      font-family: "Liberation Sans", "DejaVu Sans", "Helvetica Neue", Arial, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.35;
+      font-family: 'Liberation Sans', 'DejaVu Sans', Arial, sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.25;
       color: #1e293b;
       margin: 0;
       padding: 0;
@@ -19,88 +19,54 @@
     .header {
       text-align: center;
       border-bottom: 2px solid #0f172a;
-      padding-bottom: 8px;
-      margin-bottom: 14px;
+      padding-bottom: 4px;
+      margin-bottom: 6px;
     }
     .name {
-      font-size: 17pt;
+      font-size: 15pt;
       font-weight: bold;
       color: #0f172a;
       letter-spacing: 0.5px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       text-transform: uppercase;
     }
     .contact-info {
-      font-size: 9.5pt;
+      font-size: 8.6pt;
       color: #334155;
-      line-height: 1.4;
+      line-height: 1.35;
     }
     .contact-info a {
       color: #0369a1;
       text-decoration: none;
     }
     .section-title {
-      font-size: 11pt;
+      font-size: 9.8pt;
       font-weight: bold;
       text-transform: uppercase;
       color: #0f172a;
       border-bottom: 1.5px solid #cbd5e1;
-      padding-bottom: 2px;
-      margin-top: 13px;
-      margin-bottom: 6px;
+      padding-bottom: 1.5px;
+      margin-top: 6px;
+      margin-bottom: 3px;
       letter-spacing: 0.3px;
     }
     .objective {
-      font-size: 10pt;
+      font-size: 9.2pt;
       font-weight: 600;
       color: #0f172a;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .summary-text {
       text-align: justify;
-      font-size: 10pt;
+      font-size: 8.8pt;
       color: #334155;
-      margin-bottom: 6px;
-    }
-    .experience-item {
-      margin-bottom: 11px;
-    }
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 2px;
-    }
-    .company-name {
-      font-weight: bold;
-      font-size: 10.5pt;
-      color: #0f172a;
-    }
-    .job-period {
-      font-size: 9pt;
-      color: #475569;
-      font-weight: 600;
-    }
-    .job-role {
-      font-size: 9.5pt;
-      font-weight: 600;
-      color: #0284c7;
-      margin-bottom: 4px;
-    }
-    ul {
-      margin: 3px 0 6px 0;
-      padding-left: 18px;
-    }
-    li {
       margin-bottom: 3px;
-      text-align: justify;
-      font-size: 9.5pt;
-      color: #334155;
+      line-height: 1.26;
     }
     .skills-grid {
       display: table;
       width: 100%;
-      margin-top: 4px;
+      margin-top: 2px;
     }
     .skill-row {
       display: table-row;
@@ -108,36 +74,77 @@
     .skill-cat {
       display: table-cell;
       font-weight: bold;
-      font-size: 9.5pt;
+      font-size: 8.6pt;
       color: #0f172a;
-      width: 28%;
-      padding-bottom: 3px;
+      width: 25%;
+      padding-bottom: 2px;
+      white-space: nowrap;
     }
     .skill-val {
       display: table-cell;
-      font-size: 9.5pt;
+      font-size: 8.6pt;
       color: #334155;
-      padding-bottom: 3px;
+      padding-bottom: 2px;
     }
-    .cert-item {
-      font-size: 9.5pt;
-      margin-bottom: 3px;
+    .certs-grid {
+      display: table;
+      width: 100%;
+      margin-top: 2px;
+    }
+    .cert-row {
+      display: table-row;
+    }
+    .cert-cell {
+      display: table-cell;
+      width: 50%;
+      font-size: 8.6pt;
       color: #334155;
+      padding-bottom: 2px;
     }
-    .cert-issuer {
+    .experience-item {
+      margin-bottom: 5px;
+    }
+    .job-header {
+      margin-bottom: 1px;
+    }
+    .company-name {
       font-weight: bold;
+      font-size: 9.5pt;
       color: #0f172a;
     }
+    .job-period {
+      font-size: 8.5pt;
+      color: #475569;
+      font-weight: 600;
+      float: right;
+    }
+    .job-role {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #0284c7;
+      margin-bottom: 2px;
+    }
+    ul {
+      margin: 1.5px 0 2.5px 0;
+      padding-left: 15px;
+    }
+    li {
+      margin-bottom: 1.8px;
+      text-align: justify;
+      font-size: 8.5pt;
+      color: #334155;
+      line-height: 1.22;
+    }
     .education-item {
-      margin-bottom: 5px;
+      margin-bottom: 2.5px;
     }
     .edu-degree {
       font-weight: bold;
-      font-size: 10pt;
+      font-size: 9pt;
       color: #0f172a;
     }
     .edu-inst {
-      font-size: 9.5pt;
+      font-size: 8.6pt;
       color: #475569;
     }
   </style>
@@ -148,7 +155,7 @@
   <div class="header">
     <div class="name">Guilherme de Souza Mizael de Morais</div>
     <div class="contact-info">
-      Brasileiro, 23 anos • Campo Belo – Minas Gerais (Disponibilidade para Mudança e Atuação Remota)<br>
+      Brasileiro, 23 anos • Campo Belo – Minas Gerais (Disponível para atuação presencial ou remota • Mudança e início imediato)<br>
       E-mail: <a href="mailto:guisouzaskill@gmail.com">guisouzaskill@gmail.com</a> • LinkedIn: <a href="https://www.linkedin.com/in/guilherme--desouza/">linkedin.com/in/guilherme--desouza</a><br>
       GitHub: <a href="https://github.com/guilermiii">github.com/guilermiii</a> • Portfólio Credly: <a href="https://www.credly.com/users/guilherme-souza.97d0f101">credly.com/users/guilherme-souza.97d0f101</a>
     </div>
@@ -171,7 +178,7 @@
   <div class="skills-grid">
     <div class="skill-row">
       <div class="skill-cat">Virtualização & Bare-Metal:</div>
-      <div class="skill-val">Proxmox VE, VMware ESXi / vSphere, Microsoft Hyper-V, KVM.</div>
+      <div class="skill-val">Proxmox VE, VMware ESXi / vSphere, Microsoft Hyper-V, KVM, Servidor Bare-Metal Xeon X99.</div>
     </div>
     <div class="skill-row">
       <div class="skill-cat">Sistemas Operacionais:</div>
@@ -196,59 +203,81 @@
   </div>
 
   <!-- CERTIFICAÇÕES OFICIAIS -->
-  <div class="section-title">Certificações Oficiais</div>
-  <div class="cert-item">• <span class="cert-issuer">LFCA</span> – Linux Foundation Certified IT Associate (The Linux Foundation)</div>
-  <div class="cert-item">• <span class="cert-issuer">OCI Foundations</span> – Oracle Cloud Infrastructure Certified Foundations Associate (Oracle)</div>
-  <div class="cert-item">• <span class="cert-issuer">OCI AI Foundations</span> – Oracle Cloud Infrastructure Certified AI Foundations Associate (Oracle)</div>
-  <div class="cert-item">• <span class="cert-issuer">Oracle Agentic AI</span> – Oracle Agentic AI Foundations Associate (Oracle)</div>
+  <div class="section-title">Certificações Oficiais (Credly)</div>
+  <div class="certs-grid">
+    <div class="cert-row">
+      <div class="cert-cell">• <strong>LFCA:</strong> Linux Foundation Certified IT Associate (Válido até 10/2028)</div>
+      <div class="cert-cell">• <strong>OCI Foundations:</strong> Oracle Cloud Infrastructure Certified Associate</div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-cell">• <strong>Google Cloud K8s:</strong> Deploy & Manage Kubernetes Applications</div>
+      <div class="cert-cell">• <strong>OCI AI & Agentic AI:</strong> Oracle Cloud AI & Agentic Foundations Associate</div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-cell">• <strong>Google Cloud Network:</strong> Build a Secure Cloud Network</div>
+      <div class="cert-cell">• <strong>Cisco Security:</strong> Introduction to Cybersecurity (Cisco)</div>
+    </div>
+  </div>
 
   <!-- EXPERIÊNCIA PROFISSIONAL -->
-  <div class="section-title">Experiência Profissional</div>
+  <div class="section-title">Experiência Profissional em Alta Criticidade</div>
 
   <div class="experience-item">
     <div class="job-header">
-      <span class="company-name">Unimed Cooperativa de Trabalho Médico – Campo Belo/MG</span>
       <span class="job-period">02/2025 – 06/2026</span>
+      <span class="company-name">Unimed Cooperativa de Trabalho Médico – Campo Belo/MG</span>
     </div>
-    <div class="job-role">Auxiliar de TI → Analista de Infraestrutura de Redes → Analista de TI</div>
+    <div class="job-role">Trajetória com 2 Promoções Consecutivas por Mérito: Auxiliar de TI → Analista de Redes → Analista de TI</div>
     <ul>
       <li><strong>Redução de RPO:</strong> Otimização do Recovery Point Objective de 24 horas para apenas 10 minutos em sistemas vitais de saúde.</li>
-      <li><strong>Backup & Recuperação:</strong> Implantação completa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.</li>
+      <li><strong>Backup & Recuperação:</strong> Implantação corporativa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.</li>
       <li><strong>Governança Operacional ITIL:</strong> Implementação da plataforma GLPI para gestão de incidentes, catálogo de serviços e SLAs contratuais.</li>
       <li><strong>Modernização e Virtualização:</strong> Migração de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V com alta disponibilidade.</li>
       <li><strong>Segurança e Infraestrutura Web:</strong> Implantação de Proxy Reverso Nginx para isolamento de requisições e agentes corporativos EDR/XDR para resposta a incidentes.</li>
       <li><strong>Redes Corporativas e Infraestrutura Física:</strong> Projeto e implantação do cabeamento estruturado e redes do novo Centro Médico Unimed; ativação de switches gerenciados com segmentação de VLANs e pontos de acesso UniFi corporativos.</li>
       <li><strong>Conectividade Segura:</strong> Criação e administração de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando filiais e parceiros.</li>
       <li><strong>Governança de Software:</strong> Auditoria e otimização de licenciamento Microsoft, além da elaboração de políticas de segurança da informação e POPs operacionais.</li>
-      <li><strong>Sustentação Crítica 24/7:</strong> Operação ininterrupta de sistemas de gestão, motores de autorização e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e prestadores credenciados, atuando também como apoio técnico à DPO na conformidade com a LGPD.</li>
+      <li><strong>Sustentação Crítica 24/7:</strong> Operação ininterrupta de sistemas de gestão, motores de autorização e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos cooperados, com apoio técnico consultivo à DPO na conformidade com a LGPD.</li>
     </ul>
   </div>
 
   <div class="experience-item">
     <div class="job-header">
-      <span class="company-name">Stratus Telecomunicações – Campo Belo/MG</span>
       <span class="job-period">03/2023 – 12/2024</span>
+      <span class="company-name">Stratus Telecomunicações – Campo Belo/MG</span>
     </div>
     <div class="job-role">Analista de Telecomunicações Interno</div>
     <ul>
-      <li><strong>Suporte Técnico Avançado L2/L3:</strong> Atendimento especializado e diagnóstico remoto para redes metropolitanas, corporativas e domésticas em conexões de fibra óptica e rádio.</li>
-      <li><strong>Redes Ópticas EPON/GPON:</strong> Suporte consultivo às equipes externas de campo em questões de looping de rede, expansão de sinal, atenuação óptica, hotspots e contingência.</li>
-      <li><strong>Continuidade de Serviços:</strong> Monitoramento e intervenção rápida em incidentes críticos de infraestrutura óptica (rompimentos de enlaces e falhas de transmissão), assegurando SLAs contratuais de transporte de dados.</li>
+      <li><strong>Suporte Técnico Avançado L2/L3:</strong> Atendimento corporativo e diagnóstico remoto para redes metropolitanas e corporativas em conexões de fibra óptica e rádio.</li>
+      <li><strong>Redes Ópticas EPON/GPON:</strong> Suporte consultivo às equipes externas de campo em diagnóstico de looping de rede, expansão de sinal, atenuação óptica, hotspots e contingência.</li>
+      <li><strong>Continuidade de Serviços:</strong> Monitoramento e intervenção rápida em incidentes críticos de infraestrutura óptica (rompimentos de enlaces e falhas de transmissão), assegurando cumprimento dos SLAs contratuais de transporte de dados.</li>
     </ul>
   </div>
 
-  <!-- FORMAÇÃO ACADÊMICA -->
+  <!-- FORMAÇÃO ACADÊMICA & IDIOMAS -->
   <div class="section-title">Formação Acadêmica & Idiomas</div>
   <div class="education-item">
-    <span class="edu-degree">Bacharelado em Sistemas de Informação</span> — <span class="edu-inst">Universidade Norte do Paraná (UNOPAR)</span><br>
-    <span style="font-size: 9pt; color: #475569;">Cursando (6º Semestre • Previsão de Conclusão: 2027)</span>
+    <div style="clear: both;">
+      <span class="job-period">2024 – 2027 (Previsão)</span>
+      <span class="edu-degree">Bacharelado em Sistemas de Informação</span> — <span class="edu-inst">Universidade Norte do Paraná (UNOPAR)</span>
+    </div>
+    <div style="font-size: 8.2pt; color: #475569;">Cursando (Indo para o último período)</div>
   </div>
-  <div class="education-item" style="margin-top: 4px;">
-    <span class="edu-degree">Curso Técnico em Informática</span> — <span class="edu-inst">Centro Federal de Educação Tecnológica (CEFET)</span><br>
-    <span style="font-size: 9pt; color: #475569;">Concluído (2023 – 2024)</span>
+  <div class="education-item" style="margin-top: 2px;">
+    <div style="clear: both;">
+      <span class="job-period">2023 – 2024</span>
+      <span class="edu-degree">Curso Técnico em Informática</span> — <span class="edu-inst">Centro Federal de Educação Tecnológica (CEFET)</span>
+    </div>
+    <div style="font-size: 8.2pt; color: #475569;">Concluído</div>
   </div>
-  <div style="margin-top: 5px; font-size: 9.5pt; color: #334155;">
-    <strong>Idioma:</strong> Inglês Técnico (Proficiência em leitura e documentações técnicas de infraestrutura e engenharia de software).
+  <div style="margin-top: 2px; font-size: 8.4pt; color: #334155;">
+    <strong>Idioma:</strong> Inglês Técnico (Proficiência em documentações técnicas internacionais, RFCs e manuais).
+  </div>
+
+  <!-- HOMELAB & PROJETOS PRÁTICOS -->
+  <div class="section-title">Laboratório Técnico (Homelab) & Projetos de Engenharia</div>
+  <div style="font-size: 8.5pt; color: #334155; line-height: 1.28; text-align: justify;">
+    <strong>Servidor Bare-Metal Enterprise Homelab:</strong> Servidor dedicado com Placa-Mãe X99 Enterprise, processador <strong>Intel Xeon E5-2682 v4 (16 Cores / 32 Threads)</strong>, <strong>64 GB RAM DDR4 ECC</strong> e hypervisor Proxmox VE 8. Ambiente prático para experimentação de clusters Kubernetes (K3s/Kind), simulação de topologias de rede com MikroTik RouterOS virtualizado, testes de Chaos Engineering, observabilidade (Prometheus/Grafana) e validação de código IaC antes de deploys em nuvem (OCI/AWS).
   </div>
 
 </body>
