@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Github, Download, Copy, Check, MessageSquare, Terminal } from 'lucide-react';
+import { Mail, Linkedin, Github, Download, Copy, Check, MessageSquare, Award } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function ContactSection() {
@@ -102,17 +102,22 @@ export default function ContactSection() {
                 </div>
               </a>
 
-              {/* Bastion Node Status Card */}
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+              {/* Credly Card */}
+              <a
+                href={PORTFOLIO_DATA.profile.credly}
+                target="_blank"
+                rel="noreferrer"
+                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 hover:border-amber-500/40 hover:bg-white dark:hover:bg-slate-900 transition flex flex-col justify-between group shadow-sm"
+              >
                 <div className="flex items-center justify-between">
-                  <Terminal className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
+                  <Award className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                  <span className="text-[10px] text-slate-500">9 Badges</span>
                 </div>
                 <div className="mt-3">
-                  <div className="font-bold text-slate-900 dark:text-white">OCI Bastion</div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">Zero-Trust Active</div>
+                  <div className="font-bold text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition">Credly</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate">guilherme-souza</div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
