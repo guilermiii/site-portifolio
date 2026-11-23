@@ -17,13 +17,14 @@ export default function InteractiveTerminal() {
           <div className="text-emerald-400 font-bold">guilherme@oci-bastion</div>
           <div className="text-slate-500">----------------------</div>
           <div><span className="text-sky-400">OS:</span> Linux (Debian 12 / Alpine 3.20 / Fedora 45)</div>
-          <div><span className="text-sky-400">Host:</span> Oracle Cloud Always Free (Ampere A1 ARM64) + Proxmox VE</div>
-          <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
+          <div><span className="text-sky-400">Host:</span> Oracle Cloud (ARM64 Ampere A1) + Homelab Bare-Metal X99 Xeon (Proxmox VE 8)</div>
+          <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64 PVE</div>
           <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
           <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
-          <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR) • Técnico Informática (CEFET)</div>
-          <div><span className="text-sky-400">Localização:</span> Campo Belo – MG (Disponibilidade para Mudança e Remoto)</div>
-          <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
+          <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR - Indo para o último período) • Técnico Informática (CEFET)</div>
+          <div><span className="text-sky-400">Trajetória:</span> Unimed (2 promoções consecutivas por mérito: Auxiliar ➔ Analista de Redes ➔ Analista de TI)</div>
+          <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA (Válido até 2028), Google Cloud K8s, Cisco Cybersecurity, Oracle OCI</div>
+          <div><span className="text-sky-400">Homelab:</span> Intel Xeon E5-2682v4 (16c/32t) • 64GB DDR4 ECC • X99 Bare-Metal</div>
           <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
           <div className="text-slate-400 pt-1">💡 Digite <span className="text-emerald-400">help</span> para ver a lista de comandos interativos.</div>
         </div>
@@ -63,6 +64,7 @@ export default function InteractiveTerminal() {
           <div className="space-y-1 text-xs font-mono text-slate-300">
             <div className="text-emerald-400 font-bold mb-1">Comandos Disponíveis:</div>
             <div><span className="text-sky-400 w-36 inline-block">fastfetch</span> : Exibe resumo e telemetria do sistema</div>
+            <div><span className="text-sky-400 w-36 inline-block">homelab</span> : Exibe hardware e arquitetura do Homelab Xeon 64GB</div>
             <div><span className="text-sky-400 w-36 inline-block">kubectl get nodes</span> : Lista os nós do cluster Kubernetes OCI ARM64</div>
             <div><span className="text-sky-400 w-36 inline-block">kubectl get pods</span> : Lista pods de monitoramento e produção</div>
             <div><span className="text-sky-400 w-36 inline-block">docker ps</span> : Lista contêineres em execução no nó de produção</div>
@@ -84,8 +86,13 @@ export default function InteractiveTerminal() {
 
       case 'whoami':
         output = (
-          <div className="text-xs font-mono text-slate-300">
-            <span className="text-emerald-400 font-bold">guilherme de souza</span> — DevOps & SRE | Infraestrutura On-Premise & Cloud (guilermiii)
+          <div className="text-xs font-mono text-slate-300 space-y-1">
+            <div>
+              <span className="text-emerald-400 font-bold">Guilherme de Souza</span> (@guilermiii) — DevOps & SRE | Infraestrutura Crítica On-Premise & Cloud
+            </div>
+            <div className="text-slate-400">
+              Estudante de Sistemas de Informação (UNOPAR - último período) • 2 promoções na Unimed por mérito • Homelab Bare-Metal Xeon 16c/32t 64GB RAM
+            </div>
           </div>
         );
         break;
@@ -97,14 +104,33 @@ export default function InteractiveTerminal() {
             <div className="text-emerald-400 font-bold">guilherme@oci-bastion</div>
             <div className="text-slate-500">----------------------</div>
             <div><span className="text-sky-400">OS:</span> Linux (Debian 12 / Alpine 3.20 / Fedora 45)</div>
-            <div><span className="text-sky-400">Host:</span> Oracle Cloud Always Free (Ampere A1 ARM64) + Proxmox VE</div>
-            <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64</div>
+            <div><span className="text-sky-400">Host:</span> Oracle Cloud (ARM64 Ampere A1) + Homelab Bare-Metal X99 Xeon (Proxmox VE 8)</div>
+            <div><span className="text-sky-400">Kernel:</span> 6.12.0-cloud-arm64 / Linux x86_64 PVE</div>
             <div><span className="text-sky-400">Uptime:</span> 180 days, 14 hours, 22 mins</div>
             <div><span className="text-sky-400">Roles:</span> DevOps Engineer • Site Reliability Engineer (SRE) • Infraestrutura On-Premise & Cloud</div>
-            <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR) • Técnico Informática (CEFET)</div>
-            <div><span className="text-sky-400">Localização:</span> Campo Belo – MG (Disponibilidade para Mudança e Remoto)</div>
-            <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA, Oracle OCI Foundations, OCI AI, Agentic AI</div>
+            <div><span className="text-sky-400">Formação:</span> Sistemas de Informação (UNOPAR - Indo para o último período) • Técnico Informática (CEFET)</div>
+            <div><span className="text-sky-400">Trajetória:</span> Unimed (2 promoções consecutivas por mérito: Auxiliar ➔ Analista de Redes ➔ Analista de TI)</div>
+            <div><span className="text-sky-400">Certificações:</span> Linux Foundation LFCA (Válido até 2028), Google Cloud K8s, Cisco Cybersecurity, Oracle OCI</div>
+            <div><span className="text-sky-400">Homelab:</span> Intel Xeon E5-2682v4 (16c/32t) • 64GB DDR4 ECC • X99 Bare-Metal</div>
             <div><span className="text-sky-400">SLA Alvo:</span> 99.99% • RPO: 10min (Healthcare Tier-1)</div>
+          </div>
+        );
+        break;
+
+      case 'homelab':
+        output = (
+          <div className="space-y-1.5 text-xs font-mono text-slate-300">
+            <div className="text-emerald-400 font-bold">🖥️ Servidor Bare-Metal Enterprise Homelab (Proxmox VE 8)</div>
+            <div className="text-slate-500">--------------------------------------------------</div>
+            <div><span className="text-sky-400 w-28 inline-block">Placa-Mãe:</span> Placa-Mãe X99 Enterprise Dual/Single NVMe</div>
+            <div><span className="text-sky-400 w-28 inline-block">Processador:</span> Intel Xeon E5-2682 v4 @ 3.00GHz (16 Cores / 32 Threads, 40MB Cache)</div>
+            <div><span className="text-sky-400 w-28 inline-block">Memória RAM:</span> 64 GB DDR4 ECC Registered (Quad-Channel)</div>
+            <div><span className="text-sky-400 w-28 inline-block">Hypervisor:</span> Proxmox VE 8.x (Kernel Linux 6.8 PVE, KVM & LXC)</div>
+            <div><span className="text-sky-400 w-28 inline-block">Rede Virtual:</span> MikroTik RouterOS CHR + VLANs 802.1Q + UniFi Controller</div>
+            <div><span className="text-sky-400 w-28 inline-block">Workloads:</span> Clusters K3s/Kind, Chaos Engineering, Pipelines Locais CI/CD, Stack Prometheus + Grafana</div>
+            <div className="text-emerald-400/90 pt-1">
+              🎯 <span className="font-semibold">Propósito:</span> Hobby e laboratório avançado de engenharia de confiabilidade (SRE), testes práticos sob estresse e validação de arquiteturas antes de deploy em nuvem.
+            </div>
           </div>
         );
         break;
@@ -220,11 +246,11 @@ export default function InteractiveTerminal() {
               <div className="text-emerald-400 font-bold">GUILHERME DE SOUZA MIZAEL DE MORAIS — CURRÍCULO EXECUTIVO</div>
               <div>Cargo: DevOps Engineer | SRE | Infraestrutura Crítica On-Premise & Cloud</div>
               <div>Localização: Campo Belo – MG (Disponibilidade para Mudança e Remoto) • E-mail: guisouzaskill@gmail.com</div>
-              <div>Formação: Bacharelado em Sistemas de Informação (UNOPAR - Cursando) | Técnico em Informática (CEFET)</div>
+              <div>Formação: Bacharelado em Sistemas de Informação (UNOPAR - Indo para o último período) | Técnico em Informática (CEFET)</div>
               <div className="text-slate-400 pt-1">
-                Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores),
-                redução de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / VMware,
-                redes MikroTik / UniFi e automação declarativa com Terraform, Kubernetes e Oracle Cloud.
+                Especialista em sustentação de ambientes hospitalares 24/7 (140+ prestadores) com histórico de 2 promoções consecutivas por mérito na Unimed.
+                Redução comprovada de RPO de 24h para 10 min, Veeam Backup, virtualização Proxmox VE / VMware / Hyper-V,
+                redes MikroTik / UniFi, homelab Xeon X99 16c/32t 64GB e automação declarativa com Terraform, Kubernetes e Oracle Cloud.
               </div>
               <div className="pt-1">
                 <a
@@ -282,6 +308,7 @@ export default function InteractiveTerminal() {
   const quickCommands = [
     'help',
     'fastfetch',
+    'homelab',
     'kubectl get nodes',
     'docker ps',
     'terraform plan',

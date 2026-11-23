@@ -17,9 +17,19 @@ export interface Certification {
   issuer: string;
   code: string;
   date: string;
+  validity?: string;
   badgeUrl?: string;
   credlyUrl: string;
   skills: string[];
+}
+
+export interface PromotionStep {
+  role: string;
+  period: string;
+  badge: string;
+  badgeType: 'promotion' | 'initial';
+  summary: string;
+  highlights: string[];
 }
 
 export interface Experience {
@@ -28,7 +38,8 @@ export interface Experience {
   period: string;
   location: string;
   highlight: string;
-  achievements: string[];
+  promotions?: PromotionStep[];
+  achievements?: string[];
   techStack: string[];
 }
 
@@ -39,6 +50,17 @@ export interface Education {
   period: string;
   status: string;
   details: string;
+}
+
+export interface HomelabInfo {
+  server: string;
+  cpu: string;
+  ram: string;
+  motherboard: string;
+  hypervisor: string;
+  network: string;
+  workloads: string[];
+  purpose: string;
 }
 
 export const PORTFOLIO_DATA = {
@@ -56,8 +78,25 @@ export const PORTFOLIO_DATA = {
     github: 'https://github.com/guilermiii',
     credly: 'https://www.credly.com/users/guilherme-souza.97d0f101',
     resumePdf: '/docs/curriculo-guilherme.pdf',
-    bio: 'Profissional de Tecnologia com sólida atuação em ambientes de missão crítica de alta complexidade (24/7), especializado na gestão, segurança e modernização de infraestrutura on-premises e em nuvem. Experiência comprovada na redução de RPO de 24h para 10 min, backup corporativo com Veeam, virtualização bare-metal (Proxmox VE, VMware, Hyper-V), redes gerenciadas multi-vendor (MikroTik, UniFi, switches L2/L3), governança operacional ITIL com GLPI, automação declarativa com Terraform, conteinerização Docker/Kubernetes e nuvem OCI/AWS.',
+    bio: 'Olá, sou o Guilherme de Souza. Estudante de Sistemas de Informação (indo para o último período), entusiasta de DevOps e SRE com sólida experiência em ambientes críticos de infraestrutura On-Premise e telecomunicações. Tenho alta proficiência técnica em infraestrutura, com solidez garantida por estudos pessoais e laboratórios contínuos. Estou preparado tanto para o legado quanto para a infraestrutura moderna Cloud Native, com histórico comprovado de atuação sob pressão em operações ininterruptas 24/7.',
   },
+
+  homelab: {
+    server: 'Servidor Bare-Metal Enterprise Homelab',
+    motherboard: 'Placa-Mãe X99 Enterprise',
+    cpu: 'Intel Xeon E5-2682 v4 (16 Cores / 32 Threads)',
+    ram: '64 GB DDR4 ECC Registered',
+    hypervisor: 'Proxmox VE 8 (KVM & LXC)',
+    network: 'MikroTik RouterOS Virtualizado + UniFi APs',
+    workloads: [
+      'Clusters Kubernetes (K3s / Kind)',
+      'Laboratório de Chaos Engineering & Resiliência',
+      'Testes de Carga & Alta Concorrência',
+      'Pipelines Locais CI/CD & Automação Ansible',
+      'Stack Observabilidade (Prometheus + Grafana)',
+    ],
+    purpose: 'Hobby e laboratório avançado de engenharia de confiabilidade, testes práticos sob estresse e validação de arquiteturas antes de deploy em nuvem.',
+  } as HomelabInfo,
 
   telemetry: [
     { label: 'SLA Alvo Produção', value: '99.99%', sub: 'Alta disponibilidade contínua' },
@@ -132,12 +171,63 @@ export const PORTFOLIO_DATA = {
   certifications: [
     {
       id: 'lfca',
-      title: 'Linux Foundation Certified IT Associate (LFCA)',
+      title: 'LFCA: Linux Foundation Certified IT Associate',
       issuer: 'The Linux Foundation',
-      code: 'LFCA-2024',
-      date: '2024',
+      code: 'LF-2026',
+      date: '10/2026',
+      validity: 'Válido até 07/10/2028',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
-      skills: ['Linux Kernel & CLI', 'System Administration', 'Security Fundamentals', 'Networking', 'Cloud Basics'],
+      skills: ['Linux Kernel & CLI', 'System Administration', 'Network Architecture', 'Storage & Security', 'Cloud Fundamentals'],
+    },
+    {
+      id: 'gcp-k8s-deploy',
+      title: 'Deploy Kubernetes Applications on Google Cloud',
+      issuer: 'Google Cloud',
+      code: 'GCP-K8S-DEP',
+      date: '11/2026',
+      validity: 'Credencial Oficial Ativa',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Google Kubernetes Engine (GKE)', 'Docker Containers', 'Kubectl CLI', 'Continuous Delivery', 'Microservices'],
+    },
+    {
+      id: 'gcp-k8s-manage',
+      title: 'Manage Kubernetes in Google Cloud',
+      issuer: 'Google Cloud',
+      code: 'GCP-K8S-MNG',
+      date: '11/2026',
+      validity: 'Credencial Oficial Ativa',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['GKE Multi-Cluster', 'Workload Optimization', 'Cluster Autoscaling', 'Observability'],
+    },
+    {
+      id: 'gcp-secure-net',
+      title: 'Build a Secure Google Cloud Network',
+      issuer: 'Google Cloud',
+      code: 'GCP-NET-SEC',
+      date: '10/2026',
+      validity: 'Credencial Oficial Ativa',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Cloud VPC', 'Firewall Rules', 'Private Google Access', 'Cloud Armor', 'Zero-Trust Network'],
+    },
+    {
+      id: 'gcp-load-balancing',
+      title: 'Implement Load Balancing on Compute Engine',
+      issuer: 'Google Cloud',
+      code: 'GCP-LB',
+      date: '10/2026',
+      validity: 'Credencial Oficial Ativa',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['HTTP(S) Load Balancer', 'High Availability', 'Traffic Distribution', 'Compute Engine'],
+    },
+    {
+      id: 'cisco-cyber',
+      title: 'Introduction to Cybersecurity',
+      issuer: 'Cisco',
+      code: 'CISCO-SEC',
+      date: '08/2026',
+      validity: 'Credencial Oficial Ativa',
+      credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
+      skills: ['Threat Detection', 'Network Defense', 'Data Privacy', 'Security Compliance'],
     },
     {
       id: 'oci-foundations',
@@ -145,6 +235,7 @@ export const PORTFOLIO_DATA = {
       issuer: 'Oracle',
       code: 'OCI-FA-2024',
       date: '2024',
+      validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['OCI Core Services', 'VCN & Networking', 'IAM & Security', 'Autonomous Database', 'Storage & Compute'],
     },
@@ -154,6 +245,7 @@ export const PORTFOLIO_DATA = {
       issuer: 'Oracle',
       code: 'OCI-AI-2024',
       date: '2024',
+      validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['AI & ML Foundations', 'OCI AI Services', 'Generative AI Concepts', 'Data Science Workflows'],
     },
@@ -163,6 +255,7 @@ export const PORTFOLIO_DATA = {
       issuer: 'Oracle',
       code: 'AGENTIC-AI-2024',
       date: '2024',
+      validity: 'Credencial Oficial Ativa',
       credlyUrl: 'https://www.credly.com/users/guilherme-souza.97d0f101',
       skills: ['Autonomous Agents', 'LLM Orchestration', 'Multi-Agent Workflows', 'Tool Integration'],
     },
@@ -171,34 +264,80 @@ export const PORTFOLIO_DATA = {
   experience: [
     {
       company: 'Unimed Cooperativa de Trabalho Médico – Campo Belo/MG',
-      role: 'Auxiliar de TI → Analista de Infraestrutura de Redes → Analista de TI',
-      period: '02/2025 – 06/2026',
+      role: 'Analista de TI (Trajetória com 2 Promoções Consecutivas)',
+      period: '02/2025 – 06/2026 • 1 ano 5 meses',
       location: 'Campo Belo – MG',
-      highlight: 'Sustentação contínua 24/7 de ecossistema hospitalar de saúde, governança ITIL e modernização de infraestrutura on-premises para mais de 140 hospitais e prestadores credenciados.',
-      achievements: [
-        'Redução drástica do RPO (Recovery Point Objective) de 24 horas para apenas 10 minutos em sistemas de saúde vitais.',
-        'Implantação completa do Veeam Backup & Replication em todos os servidores críticos on-premises, com testes semanais de restauração e runbooks técnicos padronizados.',
-        'Migração e modernização de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V com alta disponibilidade.',
-        'Implantação da plataforma GLPI para gestão de incidentes, catálogo de serviços e SLAs contratuais alinhados ao framework ITIL.',
-        'Projeto e execução de cabeamento estruturado e infraestrutura de rede completa para o novo Centro Médico Unimed.',
-        'Reestruturação de rede lógica com switches gerenciados, segmentação de VLANs e pontos de acesso UniFi corporativos.',
-        'Criação e gerenciamento de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando unidades e parceiros.',
-        'Auditoria e otimização de licenciamento Microsoft 365 e Windows Server, além da elaboração de políticas de segurança da informação e POPs operacionais.',
-        'Implantação de Proxy Reverso Nginx e proteção cibernética corporativa com agentes EDR/XDR.',
-        'Sustentação crítica 24/7 de sistemas de autorização hospitalar, gestão e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e prestadores credenciados, atuando como apoio técnico à DPO na LGPD.',
+      highlight: 'Crescimento acelerado na maior cooperativa médica da região: 2 promoções consecutivas em menos de 1 ano e meio por mérito técnico, liderança na sustentação 24/7 e entregas de missão crítica.',
+      promotions: [
+        {
+          role: 'Analista de TI',
+          period: '01/2026 – 06/2026',
+          badge: '2ª Promoção por Mérito',
+          badgeType: 'promotion',
+          summary: 'Liderança técnica na continuidade de negócio, sustentação crítica 24/7 de sistemas hospitalares e conformidade.',
+          highlights: [
+            'Redução histórica do RPO (Recovery Point Objective) de 24 horas para 10 minutos em sistemas vitais de autorização e gestão médica.',
+            'Implantação e gestão corporativa do Veeam Backup & Replication em todos os servidores críticos com testes semanais de restore e runbooks.',
+            'Migração e modernização de servidores legados VMware para clusters virtualizados Proxmox VE e Hyper-V de alta disponibilidade.',
+            'Governança operacional estruturada com framework ITIL na plataforma GLPI, definindo catálogos e SLAs rígidos.',
+            'Sustentação ininterrupta 24/7 de sistemas hospitalares e APIs on-premises para mais de 140 hospitais, clínicas, laboratórios e médicos credenciados.',
+            'Apoio técnico consultivo à DPO da empresa nas exigências e conformidade com a LGPD.',
+          ],
+        },
+        {
+          role: 'Analista de Infraestrutura de Redes',
+          period: '07/2025 – 12/2025',
+          badge: '1ª Promoção por Mérito',
+          badgeType: 'promotion',
+          summary: 'Engenharia de redes corporativas, expansão física de unidades e blindagem de perímetro.',
+          highlights: [
+            'Projeto, especificação e execução completa de cabeamento estruturado e redes do novo Centro Médico Unimed.',
+            'Reestruturação de rede lógica com switches gerenciados L2/L3 e segmentação de tráfego crítico via VLANs.',
+            'Dimensionamento e implantação de rede Wi-Fi corporativa de alta densidade com Pontos de Acesso UniFi Gerenciados.',
+            'Criação e administração de túneis VPN IPsec site-to-site e client-to-site com MikroTik RouterOS interligando filiais e parceiros.',
+            'Implantação de Proxy Reverso Nginx e proteção cibernética de endpoints com agentes EDR/XDR corporativos.',
+          ],
+        },
+        {
+          role: 'Auxiliar de TI',
+          period: '02/2025 – 06/2025',
+          badge: 'Ingresso na Empresa',
+          badgeType: 'initial',
+          summary: 'Suporte de campo, auditoria de inventário de ativos e rápida assimilação do ambiente hospitalar.',
+          highlights: [
+            'Atendimento ágil a chamados de suporte técnico para usuários internos e prestadores externos da cooperativa.',
+            'Inventário minucioso de ativos de hardware e licenças de software, identificando gargalos e oportunidades de melhoria.',
+            'Alta produtividade operacional e rápido ganho de tração técnica que resultou na primeira promoção em menos de 5 meses.',
+          ],
+        },
       ],
-      techStack: ['Proxmox VE', 'VMware ESXi', 'Hyper-V', 'Veeam Backup & Replication', 'MikroTik RouterOS', 'UniFi Enterprise', 'Switches Gerenciados', 'VLANs', 'Proxy Reverso Nginx', 'ITIL / GLPI', 'Microsoft 365', 'EDR/XDR', 'Linux Server', 'LGPD'],
+      techStack: [
+        'Proxmox VE',
+        'VMware ESXi',
+        'Hyper-V',
+        'Veeam Backup & Replication',
+        'MikroTik RouterOS',
+        'UniFi Enterprise',
+        'Switches L2/L3 Gerenciados',
+        'VLANs',
+        'Proxy Reverso Nginx',
+        'GLPI / ITIL',
+        'Microsoft 365',
+        'EDR/XDR',
+        'Linux Server',
+        'LGPD',
+      ],
     },
     {
       company: 'Stratus Telecomunicações – Campo Belo/MG',
       role: 'Analista de Telecomunicações Interno',
-      period: '03/2023 – 12/2024',
+      period: '03/2023 – 12/2024 • 1 ano 10 meses',
       location: 'Campo Belo – MG',
-      highlight: 'Suporte avançado L2/L3 para redes de transporte metropolitano e infraestrutura óptica de alta densidade.',
+      highlight: 'Suporte corporativo L2/L3 para redes de transporte metropolitano e infraestrutura óptica de alta densidade.',
       achievements: [
         'Suporte técnico corporativo avançado L2/L3 para redes metropolitanas, corporativas e domésticas em conexões de fibra óptica e rádio.',
         'Suporte consultivo e diagnóstico a equipes externas de campo em redes EPON e GPON, tratamento de looping de rede, atenuação óptica, expansão de sinal e hotspots.',
-        'Atuação direta em contingência e incidentes críticos de infraestrutura óptica (rompimentos de fibras e falhas de transmissão), garantindo cumprimento de SLAs contratuais de transporte de dados.',
+        'Atuação direta em contingência e incidentes críticos de infraestrutura óptica (rompimentos de enlaces e falhas de transmissão), garantindo cumprimento de SLAs contratuais de transporte de dados.',
       ],
       techStack: ['Redes EPON / GPON', 'Switches L2/L3', 'Roteamento IP', 'Fibra Óptica', 'QoS & SLA', 'Diagnóstico L2/L3', 'Telecom'],
     },
@@ -209,8 +348,8 @@ export const PORTFOLIO_DATA = {
       id: 'unopar',
       institution: 'Universidade Norte do Paraná (UNOPAR)',
       degree: 'Bacharelado em Sistemas de Informação',
-      period: '2024 – 2027 (Previsão de Conclusão)',
-      status: 'Cursando (6º Semestre)',
+      period: '2024 – 2027 (Previsão)',
+      status: 'Cursando (Indo para o Último Período)',
       details: 'Formação superior com ênfase em Engenharia de Software, Arquitetura de Sistemas Distribuídos, Redes, Governança de TI e Banco de Dados.',
     },
     {
@@ -226,11 +365,11 @@ export const PORTFOLIO_DATA = {
   skills: [
     {
       category: 'Cloud & Virtualização',
-      items: ['Oracle Cloud (OCI)', 'Amazon Web Services (AWS)', 'Proxmox VE', 'VMware ESXi', 'Hyper-V'],
+      items: ['Oracle Cloud (OCI)', 'Amazon Web Services (AWS)', 'Google Cloud (GCP)', 'Proxmox VE', 'VMware ESXi', 'Hyper-V'],
     },
     {
       category: 'Contêineres & Orquestração',
-      items: ['Kubernetes (K8s)', 'Docker', 'Docker Compose', 'Podman', 'K3s / Kind', 'Helm'],
+      items: ['Kubernetes (GKE/K3s/Kind)', 'Docker', 'Docker Compose', 'Podman', 'Helm'],
     },
     {
       category: 'IaC & Automação CI/CD',
@@ -242,11 +381,11 @@ export const PORTFOLIO_DATA = {
     },
     {
       category: 'Redes & Segurança',
-      items: ['MikroTik RouterOS', 'UniFi Enterprise', 'VPN IPsec / WireGuard', 'VLAN & Subnetting', 'Nginx Reverse Proxy', 'Zero-Trust'],
+      items: ['MikroTik RouterOS', 'UniFi Enterprise', 'VPN IPsec / WireGuard', 'VLAN & Subnetting', 'Nginx Reverse Proxy', 'EDR/XDR', 'Zero-Trust'],
     },
     {
-      category: 'Sistemas Operacionais & Governança',
-      items: ['Linux (Debian/Ubuntu/RHEL/Alpine)', 'Governança ITIL', 'GLPI Service Desk', 'Active Directory', 'EDR/XDR'],
+      category: 'Bare-Metal & Governança',
+      items: ['Servidores Xeon X99 Bare-Metal', 'Veeam Backup & Replication', 'Governança ITIL', 'GLPI Service Desk', 'Microsoft 365', 'LGPD'],
     },
   ],
 

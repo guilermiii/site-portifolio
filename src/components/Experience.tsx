@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, GraduationCap, Globe } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle2, Building2, GraduationCap, Globe, TrendingUp } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Experience() {
@@ -13,7 +13,7 @@ export default function Experience() {
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Experiência Corporativa em Alta Criticidade</h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-            Histórico comprovado em sustentação 24/7, modernização de infraestrutura legada e governança ITIL.
+            Histórico comprovado em sustentação 24/7, modernização de infraestrutura legada e governança ITIL com rápido reconhecimento interno.
           </p>
         </div>
 
@@ -54,18 +54,94 @@ export default function Experience() {
                 🎯 <span className="font-semibold">{exp.highlight}</span>
               </div>
 
-              {/* Achievements list */}
-              <div className="mt-5 space-y-2.5">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-700 dark:text-slate-400 font-semibold">
-                  Principais Entregas e Resultados:
-                </h4>
-                {exp.achievements.map((item, itemIdx) => (
-                  <div key={itemIdx} className="flex items-start space-x-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                    <span className="leading-relaxed">{item}</span>
+              {/* Case 1: Nested Promotion Ladder (Gold Standard) */}
+              {exp.promotions && exp.promotions.length > 0 ? (
+                <div className="mt-6 space-y-6">
+                  {/* Banner */}
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-transparent border border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div className="flex items-center space-x-2 text-xs sm:text-sm font-semibold text-emerald-800 dark:text-emerald-300">
+                      <TrendingUp className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                      <span>Trilha de Crescimento Interno: 2 Promoções Consecutivas por Mérito e Entregas Críticas</span>
+                    </div>
+                    <span className="text-[11px] font-mono px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-500/30 font-bold tracking-wide w-fit">
+                      PADRÃO OURO DE EVOLUÇÃO
+                    </span>
                   </div>
-                ))}
-              </div>
+
+                  {/* Stepper Timeline */}
+                  <div className="relative pl-6 sm:pl-8 border-l-2 border-emerald-500/30 dark:border-emerald-500/20 space-y-6 ml-3 sm:ml-4">
+                    {exp.promotions.map((promo, pIdx) => {
+                      const isPromotion = promo.badgeType === 'promotion';
+                      return (
+                        <div key={pIdx} className="relative">
+                          {/* Step Marker Node */}
+                          <div
+                            className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold font-mono border-2 transition ${
+                              isPromotion
+                                ? 'bg-emerald-500 text-slate-950 border-emerald-300 ring-4 ring-emerald-500/20 shadow-sm'
+                                : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-400 border-slate-300 dark:border-slate-700'
+                            }`}
+                          >
+                            {isPromotion ? (pIdx === 0 ? '2ª' : '1ª') : '★'}
+                          </div>
+
+                          <div className="p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800/80 hover:border-emerald-500/40 transition">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-200 dark:border-slate-800">
+                              <div className="flex flex-wrap items-center gap-2">
+                                <h4 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white">
+                                  {promo.role}
+                                </h4>
+                                <span
+                                  className={`text-[11px] font-mono px-2.5 py-0.5 rounded-full font-bold border ${
+                                    isPromotion
+                                      ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30'
+                                      : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700'
+                                  }`}
+                                >
+                                  {promo.badge}
+                                </span>
+                              </div>
+
+                              <span className="text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center space-x-1">
+                                <Calendar className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
+                                <span>{promo.period}</span>
+                              </span>
+                            </div>
+
+                            <p className="mt-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 italic">
+                              {promo.summary}
+                            </p>
+
+                            <div className="mt-3.5 space-y-2">
+                              {promo.highlights.map((item, hIdx) => (
+                                <div key={hIdx} className="flex items-start space-x-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                                  <span className="leading-relaxed">{item}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ) : (
+                /* Case 2: Standard Achievements list */
+                exp.achievements && (
+                  <div className="mt-5 space-y-2.5">
+                    <h4 className="text-xs font-mono uppercase tracking-wider text-slate-700 dark:text-slate-400 font-semibold">
+                      Principais Entregas e Resultados:
+                    </h4>
+                    {exp.achievements.map((item, itemIdx) => (
+                      <div key={itemIdx} className="flex items-start space-x-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                )
+              )}
 
               {/* Tech Stack Pills */}
               <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1.5">

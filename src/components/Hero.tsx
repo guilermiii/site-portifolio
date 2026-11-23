@@ -41,9 +41,9 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-                Olá, sou <span className="font-semibold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
-                Analista de Infraestrutura (On-Premise & Cloud) e Engenheiro DevOps focado em alta disponibilidade,
-                orquestração de contêineres, automação declarativa com Terraform e sustentação de missão crítica.
+                Olá, sou o <span className="font-semibold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
+                Estudante de Sistemas de Informação (indo para o último período), entusiasta de DevOps e SRE com sólida experiência em ambientes críticos de infraestrutura On-Premise e telecomunicações.
+                Tenho alta proficiência técnica com solidez garantida por estudos contínuos. Preparado tanto para sustentar o legado quanto para arquitetar a infraestrutura moderna, habituado a atuar com alta confiabilidade sob pressão 24/7.
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
                 className="flex items-center space-x-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition"
               >
                 <Award className="w-4 h-4" />
-                <span>Credly (4 Badges)</span>
+                <span>Credly (9 Badges Oficiais)</span>
               </a>
             </div>
           </div>
@@ -169,13 +169,13 @@ export default function Hero() {
                   <div className="flex items-center space-x-2.5">
                     <Cpu className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                     <div>
-                      <div className="font-semibold text-slate-800 dark:text-slate-200">pve-homelab-cluster</div>
-                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Proxmox VE 8 + MikroTik RouterOS</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200">pve-homelab-x99-server</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Intel Xeon E5-2682v4 (16c/32t) • 64GB DDR4 ECC</div>
                     </div>
                   </div>
                   <div className="text-right">
                     <span className="text-emerald-600 dark:text-emerald-400 font-bold">ONLINE</span>
-                    <div className="text-[10px] text-slate-400 dark:text-slate-500">IPsec Site-to-Site</div>
+                    <div className="text-[10px] text-slate-400 dark:text-slate-500">Proxmox VE 8 • K3s Lab</div>
                   </div>
                 </div>
               </div>
