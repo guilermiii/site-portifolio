@@ -1,5 +1,12 @@
-import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Mail } from 'lucide-react';
+import { Terminal, Shield, ArrowRight, Github, Linkedin, Award, Mail, ShieldCheck, Cloud, Server } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
+
+const pillarIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  shield: ShieldCheck,
+  cloud: Cloud,
+  terminal: Terminal,
+  server: Server,
+};
 
 export default function Hero() {
   return (
@@ -42,15 +49,44 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Quick Metrics Cards */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 w-full max-w-3xl">
-            {PORTFOLIO_DATA.telemetry.map((stat, idx) => (
-              <div key={idx} className="p-3.5 rounded-xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 transition shadow-sm text-center">
-                <div className="text-xs font-mono text-slate-500 dark:text-slate-400">{stat.label}</div>
-                <div className="text-xl sm:text-2xl font-bold font-mono mt-1 text-emerald-600 dark:text-emerald-400">{stat.value}</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-0.5">{stat.sub}</div>
-              </div>
-            ))}
+          {/* Engineering Pillars Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-2 w-full max-w-5xl">
+            {PORTFOLIO_DATA.engineeringPillars.map((pillar) => {
+              const IconComponent = pillarIcons[pillar.icon] || ShieldCheck;
+              return (
+                <div
+                  key={pillar.id}
+                  className="group relative p-4 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/40 transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 text-left flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-2.5">
+                      <div className="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-950/60 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
+                        <IconComponent className="w-4 h-4" />
+                      </div>
+                      <span className="text-[10px] font-mono font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                        {pillar.badge}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-800/60">
+                    {pillar.tags.map((tag, tIdx) => (
+                      <span
+                        key={tIdx}
+                        className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* CTA Buttons */}

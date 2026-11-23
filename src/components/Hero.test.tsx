@@ -20,12 +20,16 @@ describe('Hero Component', () => {
     expect(screen.getByText(/LFCA & OCI CERTIFIED/i)).toBeInTheDocument();
   });
 
-  it('renders telemetry metrics cards', () => {
+  it('renders engineering pillar cards with badges, titles and tags', () => {
     render(<Hero />);
 
-    PORTFOLIO_DATA.telemetry.forEach((stat) => {
-      expect(screen.getByText(stat.label)).toBeInTheDocument();
-      expect(screen.getByText(stat.value)).toBeInTheDocument();
+    PORTFOLIO_DATA.engineeringPillars.forEach((pillar) => {
+      expect(screen.getByText(pillar.title)).toBeInTheDocument();
+      expect(screen.getByText(pillar.badge)).toBeInTheDocument();
+      expect(screen.getByText(pillar.description)).toBeInTheDocument();
+      pillar.tags.forEach((tag) => {
+        expect(screen.getByText(tag)).toBeInTheDocument();
+      });
     });
   });
 

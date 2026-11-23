@@ -98,4 +98,21 @@ describe('PORTFOLIO_DATA Integrity Tests', () => {
       expect(cefet?.details).toContain('1.320 horas');
     });
   });
+
+  describe('Engineering Pillars Integrity', () => {
+    it('should contain 4 engineering pillars covering SRE, Cloud/K8s, IaC and Homelab', () => {
+      expect(PORTFOLIO_DATA.engineeringPillars).toBeDefined();
+      expect(PORTFOLIO_DATA.engineeringPillars.length).toBe(4);
+
+      const ids = PORTFOLIO_DATA.engineeringPillars.map((p) => p.id);
+      expect(ids).toEqual(['sre-resilience', 'cloud-k8s', 'iac-automation', 'baremetal-homelab']);
+
+      PORTFOLIO_DATA.engineeringPillars.forEach((p) => {
+        expect(p.badge).toBeTruthy();
+        expect(p.title).toBeTruthy();
+        expect(p.description).toBeTruthy();
+        expect(p.tags.length).toBeGreaterThan(0);
+      });
+    });
+  });
 });

@@ -67,6 +67,15 @@ export interface HomelabInfo {
   purpose: string;
 }
 
+export interface EngineeringPillar {
+  id: string;
+  icon: 'shield' | 'cloud' | 'terminal' | 'server';
+  badge: string;
+  title: string;
+  description: string;
+  tags: string[];
+}
+
 export const PORTFOLIO_DATA = {
   profile: {
     name: 'Guilherme de Souza',
@@ -108,6 +117,41 @@ export const PORTFOLIO_DATA = {
     { label: 'Provedores Hospitalares', value: '140+', sub: 'Sustentação e governança 24/7' },
     { label: 'Cobertura IaC Declarativa', value: '100%', sub: 'Zero manual drift via Terraform' },
   ],
+
+  engineeringPillars: [
+    {
+      id: 'sre-resilience',
+      icon: 'shield',
+      badge: 'SRE & RESILIÊNCIA',
+      title: 'Alta Confiabilidade 24/7',
+      description: 'Sustentação ininterrupta de missão crítica, failover e redução de RPO de 24h para 10 min.',
+      tags: ['SLA 99.99%', 'RPO 10m', 'Chaos Eng'],
+    },
+    {
+      id: 'cloud-k8s',
+      icon: 'cloud',
+      badge: 'CLOUD NATIVE & K8S',
+      title: 'Multi-Cloud & Clusters',
+      description: 'Arquiteturas resilientes na OCI, AWS e GCP com Kubernetes (ARM64 Ampere & GKE) e Docker Multi-Arch.',
+      tags: ['OCI', 'AWS', 'GCP', 'K8s ARM64'],
+    },
+    {
+      id: 'iac-automation',
+      icon: 'terminal',
+      badge: 'GITOPS & AUTOMAÇÃO',
+      title: '100% IaC Declarativo',
+      description: 'Infraestrutura automatizada de ponta a ponta via Terraform e CI/CD, eliminando qualquer drift manual.',
+      tags: ['Terraform', 'CI/CD', 'GitOps'],
+    },
+    {
+      id: 'baremetal-homelab',
+      icon: 'server',
+      badge: 'HOMELAB ENTERPRISE',
+      title: 'Xeon 32T • 64GB ECC',
+      description: 'Servidor bare-metal próprio com Proxmox VE 8, MikroTik e laboratório para validação sob estresse.',
+      tags: ['Proxmox VE', 'MikroTik', 'VLANs'],
+    },
+  ] as EngineeringPillar[],
 
   projects: [
     {
