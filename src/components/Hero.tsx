@@ -22,11 +22,11 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6">
             {/* Status Pills */}
             <div className="flex flex-wrap items-center gap-2">
-              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-950/60 border border-emerald-500/30 text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 dark:bg-emerald-950/60 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></span>
                 <span>STATUS: OPERACIONAL 24/7</span>
               </div>
-              <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-950/60 border border-sky-500/30 text-sky-400">
+              <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-mono bg-sky-500/10 dark:bg-sky-950/60 border border-sky-500/30 text-sky-700 dark:text-sky-400">
                 <Shield className="w-3.5 h-3.5" />
                 <span>LFCA & OCI CERTIFIED</span>
               </div>
@@ -34,14 +34,14 @@ export default function Hero() {
 
             {/* Title & Headline */}
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
                 Infraestrutura Crítica,{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-sky-500 dark:from-emerald-400 dark:via-teal-300 dark:to-sky-400">
                   DevOps & SRE
                 </span>
               </h1>
-              <p className="mt-4 text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                Olá, sou <span className="font-semibold text-white">{PORTFOLIO_DATA.profile.name}</span>.
+              <p className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+                Olá, sou <span className="font-semibold text-slate-900 dark:text-white">{PORTFOLIO_DATA.profile.name}</span>.
                 Analista de Infraestrutura e Engenheiro DevOps focado em alta disponibilidade,
                 orquestração de contêineres, automação declarativa com Terraform e sustentação de missão crítica.
               </p>
@@ -50,10 +50,10 @@ export default function Hero() {
             {/* Quick Metrics Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               {PORTFOLIO_DATA.telemetry.map((stat, idx) => (
-                <div key={idx} className="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 hover:border-emerald-500/40 transition">
-                  <div className="text-xs font-mono text-slate-400">{stat.label}</div>
-                  <div className="text-xl sm:text-2xl font-bold font-mono text-white mt-1 text-emerald-400">{stat.value}</div>
-                  <div className="text-[11px] text-slate-400 truncate mt-0.5">{stat.sub}</div>
+                <div key={idx} className="p-3.5 rounded-xl bg-white dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/40 transition shadow-sm">
+                  <div className="text-xs font-mono text-slate-500 dark:text-slate-400">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl font-bold font-mono mt-1 text-emerald-600 dark:text-emerald-400">{stat.value}</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400 truncate mt-0.5">{stat.sub}</div>
                 </div>
               ))}
             </div>
@@ -70,29 +70,29 @@ export default function Hero() {
 
               <a
                 href="#terminal"
-                className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl font-semibold text-sm bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 transition"
+                className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl font-semibold text-sm bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 transition shadow-sm"
               >
-                <Terminal className="w-4 h-4 text-emerald-400" />
+                <Terminal className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <span>Testar Terminal Interativo</span>
               </a>
 
               <button
                 onClick={copyEmail}
-                className="inline-flex items-center space-x-2 px-4 py-3 rounded-xl text-sm font-mono bg-slate-900/80 hover:bg-slate-850 border border-slate-800 text-slate-300 transition"
+                className="inline-flex items-center space-x-2 px-4 py-3 rounded-xl text-sm font-mono bg-white dark:bg-slate-900/80 hover:bg-slate-100 dark:hover:bg-slate-850 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 transition shadow-sm"
               >
-                {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copied ? <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" /> : <Copy className="w-4 h-4" />}
                 <span>{copied ? 'E-mail copiado!' : 'Copiar E-mail'}</span>
               </button>
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center space-x-4 pt-1 text-xs text-slate-400">
+            <div className="flex items-center space-x-4 pt-1 text-xs text-slate-500 dark:text-slate-400">
               <span className="font-mono">LINKS RÁPIDOS:</span>
               <a
                 href={PORTFOLIO_DATA.profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center space-x-1.5 hover:text-white transition"
+                className="flex items-center space-x-1.5 hover:text-slate-900 dark:hover:text-white transition"
               >
                 <Github className="w-4 h-4" />
                 <span>GitHub</span>
@@ -101,7 +101,7 @@ export default function Hero() {
                 href={PORTFOLIO_DATA.profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center space-x-1.5 hover:text-sky-400 transition"
+                className="flex items-center space-x-1.5 hover:text-sky-600 dark:hover:text-sky-400 transition"
               >
                 <Linkedin className="w-4 h-4" />
                 <span>LinkedIn</span>
@@ -110,7 +110,7 @@ export default function Hero() {
                 href={PORTFOLIO_DATA.profile.credly}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center space-x-1.5 hover:text-amber-400 transition"
+                className="flex items-center space-x-1.5 hover:text-amber-600 dark:hover:text-amber-400 transition"
               >
                 <Award className="w-4 h-4" />
                 <span>Credly (4 Badges)</span>
@@ -120,14 +120,14 @@ export default function Hero() {
 
           {/* Right Column: Live Infrastructure Node Status Widget */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-5 shadow-2xl backdrop-blur-sm relative space-y-4">
+            <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/80 p-5 shadow-2xl backdrop-blur-sm relative space-y-4">
               {/* Header */}
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
                 <div className="flex items-center space-x-2.5">
-                  <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-                  <span className="text-xs font-mono font-semibold text-slate-200">CLUSTER OCI & PROXMOX NODES</span>
+                  <div className="w-3 h-3 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse"></div>
+                  <span className="text-xs font-mono font-semibold text-slate-800 dark:text-slate-200">CLUSTER OCI & PROXMOX NODES</span>
                 </div>
-                <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">
+                <span className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/20">
                   HEALTH: OK
                 </span>
               </div>
@@ -135,54 +135,54 @@ export default function Hero() {
               {/* Node List */}
               <div className="space-y-2.5 text-xs font-mono">
                 {/* Node 1 */}
-                <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
                   <div className="flex items-center space-x-2.5">
-                    <Server className="w-4 h-4 text-emerald-400" />
+                    <Server className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                     <div>
-                      <div className="font-semibold text-slate-200">oci-ampere-k8s-master</div>
-                      <div className="text-[10px] text-slate-400">ARM64 Ampere A1 • 4 OCPUs • 24GB</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200">oci-ampere-k8s-master</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">ARM64 Ampere A1 • 4 OCPUs • 24GB</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-emerald-400 font-bold">READY</span>
-                    <div className="text-[10px] text-slate-500">load: 0.18</div>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">READY</span>
+                    <div className="text-[10px] text-slate-400 dark:text-slate-500">load: 0.18</div>
                   </div>
                 </div>
 
                 {/* Node 2 */}
-                <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
                   <div className="flex items-center space-x-2.5">
-                    <Activity className="w-4 h-4 text-sky-400" />
+                    <Activity className="w-4 h-4 text-sky-600 dark:text-sky-400" />
                     <div>
-                      <div className="font-semibold text-slate-200">oci-monitoring-frontend</div>
-                      <div className="text-[10px] text-slate-400">FastAPI + Redis 7 + Prometheus</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200">oci-monitoring-frontend</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">FastAPI + Redis 7 + Prometheus</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-sky-400 font-bold">&lt; 3ms</span>
-                    <div className="text-[10px] text-slate-500">cache hit 99.4%</div>
+                    <span className="text-sky-600 dark:text-sky-400 font-bold">&lt; 3ms</span>
+                    <div className="text-[10px] text-slate-400 dark:text-slate-500">cache hit 99.4%</div>
                   </div>
                 </div>
 
                 {/* Node 3 */}
-                <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80 flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800/80 flex items-center justify-between">
                   <div className="flex items-center space-x-2.5">
-                    <Cpu className="w-4 h-4 text-amber-400" />
+                    <Cpu className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                     <div>
-                      <div className="font-semibold text-slate-200">pve-homelab-cluster</div>
-                      <div className="text-[10px] text-slate-400">Proxmox VE 8 + MikroTik RouterOS</div>
+                      <div className="font-semibold text-slate-800 dark:text-slate-200">pve-homelab-cluster</div>
+                      <div className="text-[10px] text-slate-500 dark:text-slate-400">Proxmox VE 8 + MikroTik RouterOS</div>
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-emerald-400 font-bold">ONLINE</span>
-                    <div className="text-[10px] text-slate-500">IPsec Site-to-Site</div>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">ONLINE</span>
+                    <div className="text-[10px] text-slate-400 dark:text-slate-500">IPsec Site-to-Site</div>
                   </div>
                 </div>
               </div>
 
               {/* Terminal Quick Peek Preview */}
-              <div className="rounded-xl bg-black/60 p-3.5 border border-slate-800/80 font-mono text-xs text-slate-300">
-                <div className="flex items-center space-x-1.5 text-slate-500 text-[10px] pb-1 border-b border-slate-800">
+              <div className="rounded-xl bg-[#070b12] p-3.5 border border-slate-300 dark:border-slate-800/80 font-mono text-xs text-slate-300">
+                <div className="flex items-center space-x-1.5 text-slate-400 text-[10px] pb-1 border-b border-slate-800">
                   <span className="w-2 h-2 rounded-full bg-red-500/80"></span>
                   <span className="w-2 h-2 rounded-full bg-yellow-500/80"></span>
                   <span className="w-2 h-2 rounded-full bg-green-500/80"></span>

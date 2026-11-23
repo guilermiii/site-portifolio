@@ -18,35 +18,35 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-[#0a0e17]/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800/80 bg-white/90 dark:bg-[#0a0e17]/85 backdrop-blur-md transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand / Logo */}
         <a href="#overview" className="flex items-center space-x-3 group">
-          <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
             <Terminal className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center space-x-2">
-              <span className="font-bold text-slate-100 tracking-tight text-sm sm:text-base">
-                guilherme<span className="text-emerald-400">.sre</span>
+              <span className="font-bold text-slate-900 dark:text-slate-100 tracking-tight text-sm sm:text-base">
+                guilherme<span className="text-emerald-600 dark:text-emerald-400">.sre</span>
               </span>
-              <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+              <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse mr-1.5"></span>
                 ACTIVE
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 font-mono hidden sm:block">oci-bastion • arm64</p>
+            <p className="text-[11px] text-slate-500 dark:text-slate-400 font-mono hidden sm:block">oci-bastion • arm64</p>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-xs lg:text-sm font-medium text-slate-300">
-          <a href="#overview" className="hover:text-emerald-400 transition">Visão Geral</a>
-          <a href="#pipeline" className="hover:text-emerald-400 transition">Esteira CI/CD</a>
-          <a href="#terminal" className="hover:text-emerald-400 transition">Terminal CLI</a>
-          <a href="#projects" className="hover:text-emerald-400 transition">Projetos IaC</a>
-          <a href="#experience" className="hover:text-emerald-400 transition">Experiência</a>
-          <a href="#certifications" className="hover:text-emerald-400 transition">Certificações</a>
+        <nav className="hidden md:flex items-center space-x-6 text-xs lg:text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#overview" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Visão Geral</a>
+          <a href="#pipeline" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Esteira CI/CD</a>
+          <a href="#terminal" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Terminal CLI</a>
+          <a href="#projects" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Projetos IaC</a>
+          <a href="#experience" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Experiência</a>
+          <a href="#certifications" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Certificações</a>
         </nav>
 
         {/* Action Buttons */}
@@ -54,17 +54,17 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           <button
             onClick={() => setDarkMode(!darkMode)}
             aria-label="Toggle theme"
-            className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-amber-400 transition"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-amber-500 dark:hover:text-amber-400 transition shadow-sm"
           >
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
           <button
             onClick={copyEmail}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 transition"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-200 transition shadow-sm"
             title="Copiar e-mail"
           >
-            {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Mail className="w-3.5 h-3.5 text-slate-400" />}
+            {copied ? <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Mail className="w-3.5 h-3.5 text-slate-500" />}
             <span>{copied ? 'Copiado!' : 'E-mail'}</span>
           </button>
 
@@ -82,13 +82,13 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         <div className="flex items-center space-x-2 md:hidden">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400"
           >
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -97,19 +97,19 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
 
       {/* Mobile Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-800 bg-[#0a0e17] px-4 py-4 space-y-3">
-          <div className="flex flex-col space-y-2 text-sm text-slate-300">
-            <a onClick={() => setMobileMenuOpen(false)} href="#overview" className="p-2 rounded hover:bg-slate-900">Visão Geral</a>
-            <a onClick={() => setMobileMenuOpen(false)} href="#pipeline" className="p-2 rounded hover:bg-slate-900">Esteira CI/CD</a>
-            <a onClick={() => setMobileMenuOpen(false)} href="#terminal" className="p-2 rounded hover:bg-slate-900">Terminal CLI</a>
-            <a onClick={() => setMobileMenuOpen(false)} href="#projects" className="p-2 rounded hover:bg-slate-900">Projetos IaC</a>
-            <a onClick={() => setMobileMenuOpen(false)} href="#experience" className="p-2 rounded hover:bg-slate-900">Experiência</a>
-            <a onClick={() => setMobileMenuOpen(false)} href="#certifications" className="p-2 rounded hover:bg-slate-900">Certificações</a>
+        <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0a0e17] px-4 py-4 space-y-3">
+          <div className="flex flex-col space-y-2 text-sm text-slate-700 dark:text-slate-300">
+            <a onClick={() => setMobileMenuOpen(false)} href="#overview" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Visão Geral</a>
+            <a onClick={() => setMobileMenuOpen(false)} href="#pipeline" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Esteira CI/CD</a>
+            <a onClick={() => setMobileMenuOpen(false)} href="#terminal" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Terminal CLI</a>
+            <a onClick={() => setMobileMenuOpen(false)} href="#projects" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Projetos IaC</a>
+            <a onClick={() => setMobileMenuOpen(false)} href="#experience" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Experiência</a>
+            <a onClick={() => setMobileMenuOpen(false)} href="#certifications" className="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-900">Certificações</a>
           </div>
-          <div className="pt-2 border-t border-slate-800 flex items-center space-x-2">
+          <div className="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center space-x-2">
             <button
               onClick={copyEmail}
-              className="flex-1 py-2 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 text-center text-slate-200"
+              className="flex-1 py-2 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center text-slate-800 dark:text-slate-200"
             >
               {copied ? 'E-mail Copiado!' : 'Copiar E-mail'}
             </button>

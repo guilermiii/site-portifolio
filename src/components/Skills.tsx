@@ -12,16 +12,16 @@ const categoryIcons = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-16 border-t border-slate-800/80">
+    <section id="skills" className="py-16 border-t border-slate-200 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center space-x-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/20 mb-2">
+          <div className="inline-flex items-center space-x-2 text-xs font-mono text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 dark:bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/30 mb-2">
             <Wrench className="w-3.5 h-3.5" />
             <span>ARSENAL TÉCNICO & DOMÍNIOS</span>
           </div>
-          <h2 className="text-3xl font-extrabold text-white">Competências em Infraestrutura & Engenharia</h2>
-          <p className="text-slate-400 text-sm mt-2">
+          <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">Competências em Infraestrutura & Engenharia</h2>
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
             Tecnologias dominadas na prática diária de sustentação de missão crítica, automação e arquiteturas em nuvem.
           </p>
         </div>
@@ -34,22 +34,22 @@ export default function Skills() {
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 hover:border-slate-700 transition"
+                className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 p-6 hover:border-slate-300 dark:hover:border-slate-700 transition shadow-sm"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                  <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                     <Icon className="w-4 h-4" />
                   </div>
-                  <h3 className="font-bold text-base text-white">{skillGroup.category}</h3>
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white">{skillGroup.category}</h3>
                 </div>
 
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((item, itemIdx) => (
                     <span
                       key={itemIdx}
-                      className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-950/80 border border-slate-800 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/30 transition"
+                      className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-lg text-xs font-mono bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/30 transition"
                     >
-                      <CheckCircle className="w-3 h-3 text-emerald-400 shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
                       <span>{item}</span>
                     </span>
                   ))}
