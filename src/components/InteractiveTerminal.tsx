@@ -127,7 +127,7 @@ export default function InteractiveTerminal() {
             <div><span className="text-sky-400 w-28 inline-block">Memória RAM:</span> 64 GB DDR4 ECC Registered (Quad-Channel)</div>
             <div><span className="text-sky-400 w-28 inline-block">Hypervisor:</span> Proxmox VE 8.x (Kernel Linux 6.8 PVE, KVM & LXC)</div>
             <div><span className="text-sky-400 w-28 inline-block">Rede Virtual:</span> MikroTik RouterOS CHR + VLANs 802.1Q + UniFi Controller</div>
-            <div><span className="text-sky-400 w-28 inline-block">Workloads:</span> Clusters K3s/Kind, Chaos Engineering, Pipelines Locais CI/CD, Stack Prometheus + Grafana</div>
+            <div><span className="text-sky-400 w-28 inline-block">Workloads:</span> Cluster Kubeadm, Zabbix + Grafana, Veeam, Windows Server, GLPI, Docker, Retro-Games-Server</div>
             <div className="text-emerald-400/90 pt-1">
               🎯 <span className="font-semibold">Propósito:</span> Hobby e laboratório avançado de engenharia de confiabilidade (SRE), testes práticos sob estresse e validação de arquiteturas antes de deploy em nuvem.
             </div>
